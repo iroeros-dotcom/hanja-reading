@@ -1,0 +1,2830 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#244b3b">
+<meta name="description" content="한자 6급 300자를 3회씩 묶어 뜻과 음을 읽는 학습 사이트. 읽기 카드, 4지선다 퀴즈, 오답 복습.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; font-src 'none'; base-uri 'none'; form-action 'none'">
+<title>한자 한 걸음 · 뜻과 음 읽기</title>
+<style>:root{--paper:#faf9f5;--white:#fff;--green:#244b3b;--green-dark:#193b2d;--green-light:#e9f0e8;--sage:#e9f0e8;--ink:#283a30;--muted:#72796e;--line:#e6e7df;--accent:#d97152;--yellow:#f3cf80;--radius:18px;--shadow:0 5px 20px #244b3b06;font-family:-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;color:var(--ink);background:var(--paper);font-synthesis:none}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-width:320px;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}button,input,select{font:inherit}button{cursor:pointer}button,input,select,a{-webkit-tap-highlight-color:transparent}button{transition:background .18s ease,border-color .18s ease,transform .18s ease,color .18s ease}button:disabled{cursor:default;opacity:.43}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #cc9b32;outline-offset:4px}a{color:inherit}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.35;letter-spacing:-.045em}button:active:not(:disabled){transform:translateY(1px)}.hanja{font-family:'Kaiti','KaiTi','Batang','Noto Serif CJK KR',serif}.muted{color:var(--muted)}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;padding:0;margin:-1px}
+.site-header{background:#fffefb;border-bottom:1px solid var(--line)}.header-inner{min-height:92px;max-width:1200px;margin:auto;padding:16px 40px;display:flex;align-items:center;gap:28px}.brand{display:flex;gap:11px;align-items:center;flex-shrink:0;border:0;background:none;padding:0;text-decoration:none;text-align:left}.brand-mark{width:42px;height:46px;border-radius:12px;background:var(--green);color:#fff9e9;font-size:25px;display:grid;place-items:center;font-family:'Batang',serif;box-shadow:inset 0 -3px 0 #ffffff14}.brand-name{font-size:19px;font-weight:800;letter-spacing:-1px;display:block;color:var(--green)}.brand-sub{display:block;font-size:10px;letter-spacing:1.4px;color:var(--muted);font-weight:650;margin-top:1px}.header-inner nav{display:flex;gap:7px;margin:auto;align-items:center}.nav-button{background:none;border:0;border-radius:9px;padding:10px 13px;color:#747d72;white-space:nowrap;font-size:14px;font-weight:650;position:relative}.nav-button:hover{color:var(--green);background:#f1f4ed}.nav-button.active{background:var(--green-light);color:var(--green)}.badge{border-radius:20px;min-width:18px;height:18px;background:#e9dace;color:#9c543c;font-size:10px;display:inline-grid;place-items:center;padding:0 5px;margin-left:4px;vertical-align:1px}.storage-pill{display:flex;gap:7px;align-items:center;color:#72816c;font-size:11px;white-space:nowrap}.storage-pill::before{content:'';width:6px;height:6px;display:inline-block;background:#79a074;border-radius:50%}.container{max-width:1200px;margin:0 auto;padding:38px 40px 0;min-height:70vh}.page-intro{margin-bottom:26px}.eyebrow{display:flex;align-items:center;gap:8px;color:#5a765c;font-size:12px;font-weight:750;letter-spacing:.06em;line-height:1.7}.page-heading{font-size:32px;font-weight:800;color:var(--green);margin:8px 0}.page-intro p{font-size:14px}.hero{position:relative;background:#edf1e8;border:1px solid #e3e9db;border-radius:23px;min-height:329px;padding:37px 42px 31px;display:grid;grid-template-columns:1.25fr 1fr;gap:20px;overflow:hidden}.hero-copy{position:relative;z-index:1;align-self:center}.hero-copy .eyebrow{display:inline-flex;background:#fffaf0b3;padding:5px 11px;border-radius:5px;font-size:10px;letter-spacing:.08em;margin-bottom:15px}.hero h1{font-size:46px;letter-spacing:-2.8px;font-weight:800;color:var(--green);line-height:1.28;margin-bottom:15px}.hero h1 em{font-style:normal;position:relative}.hero-copy>p{color:#6d7a69;font-size:13px;line-height:1.9}.hero-actions{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:24px}.primary,.secondary,.quiz-link{border-radius:9px;font-size:13px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;line-height:1.4;min-height:43px}.primary{background:var(--green);color:#fff;border:1px solid var(--green);padding:12px 19px;box-shadow:0 3px 0 #193b2d13}.primary:hover:not(:disabled){background:var(--green-dark);border-color:var(--green-dark)}.secondary{border:1px solid #dce3d5;background:#fff;color:var(--green);padding:10px 17px}.secondary:hover:not(:disabled){background:#f1f5ec;border-color:#aebfa6}.text-link{background:none;border:0;padding:4px 0;color:#4e6b50;font-size:12px;font-weight:700;text-decoration:none}.text-link:hover{text-decoration:underline}.hero-art{align-self:center;justify-self:center;position:relative;width:100%;max-width:345px;min-width:0}.hero-art svg{display:block;width:100%;height:auto;overflow:visible}.hero-footnote{font-size:10px;color:#82917b;margin-top:13px;display:flex;align-items:center;gap:5px}.stats-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:22px 0 37px}.stat-card{border:1px solid var(--line);border-radius:13px;background:#fffefb;padding:19px 23px;display:flex;align-items:center;gap:15px;box-shadow:var(--shadow)}.stat-icon{width:42px;height:42px;border-radius:12px;background:#f1f4e9;display:grid;place-items:center;font-size:20px;color:var(--green);flex-shrink:0}.stat-card:nth-child(2) .stat-icon{background:#fcf1df;color:#b29149}.stat-card:nth-child(3) .stat-icon{background:#f9ece4;color:#bc7253}.stat-value{font-size:23px;font-weight:800;line-height:1.25;letter-spacing:-1px;color:#344836}.stat-value small{font-size:13px;font-weight:600;margin-left:4px;color:#7b8474;letter-spacing:0}.stat-label{font-size:11px;color:#899080;line-height:1.6;margin-top:3px}.section-heading{display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:19px}.section-heading h2{font-size:21px;font-weight:800;color:var(--green)}.section-heading p{font-size:12px;color:var(--muted);margin-top:6px}.section-heading>.muted{font-size:11px;white-space:nowrap;padding-bottom:2px}.journey-layout{display:grid;grid-template-columns:minmax(0,1fr) 264px;align-items:start;gap:24px}.group-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}.group-card{border:1px solid var(--line);background:#fffefb;border-radius:15px;padding:22px;box-shadow:var(--shadow);position:relative;transition:border-color .2s,box-shadow .2s}.group-card:hover{border-color:#b9c7af;box-shadow:0 5px 18px #244b3b09}.group-card.current,.group-card:first-child{border-color:#a8b99d}.group-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:13px;gap:8px}.group-number{font-size:10px;letter-spacing:.1em;font-weight:800;color:#9caa94;text-transform:uppercase}.group-status{display:inline-flex;padding:3px 8px;border-radius:5px;background:#f1f2ec;font-size:9px;color:#8d9784;line-height:1.7;font-weight:600}.group-status.started{color:#54744b;background:#edf3e8}.group-status.completed{background:#e3eee0;color:#35612f}.group-range{font-size:19px;font-weight:800;letter-spacing:-.7px;color:var(--green)}.group-name{font-size:11px;color:#8b9382;margin-top:3px}.sample-characters{display:flex;justify-content:space-between;gap:5px;margin:19px 0 15px;color:#66705e}.sample-characters span{font-family:'Batang','Kaiti','KaiTi',serif;font-size:23px;line-height:1.4}.sample-characters span:last-child:only-child{font-size:16px}.group-meta{display:flex;justify-content:space-between;gap:5px;align-items:center;font-size:10px;color:#8c9584}.progress-track{width:100%;height:4px;background:#edf0e7;border-radius:50px;overflow:hidden;margin-top:8px}.progress-track i{display:block;height:100%;border-radius:50px;background:#8ea57c;transition:width .3s ease}.group-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:17px;padding-top:16px;border-top:1px solid #eff0e9}.group-actions .secondary{min-height:35px;padding:8px 10px;border-color:#dfe4d8;background:#f6f8f1;font-size:11px;border-radius:7px}.quiz-link{border:0;background:none;font-size:11px;color:#6a7b5f;padding:7px 8px;min-height:35px}.quiz-link:hover:not(:disabled){background:#eef3e8}.side-stack{display:grid;gap:17px}.side-card{border:1px solid var(--line);background:#fffefb;padding:22px;border-radius:15px;box-shadow:var(--shadow)}.side-card h3{font-size:15px;font-weight:800;color:var(--green);margin-bottom:18px}.side-card>p{font-size:11px;line-height:1.9;color:#87907e}.step-list{margin:0;padding:0;list-style:none;display:grid;gap:20px}.step-list li{display:flex;gap:11px;align-items:flex-start}.step-number{height:23px;width:23px;display:grid;place-items:center;background:#edf2e7;color:#62805b;border-radius:7px;font-size:10px;font-weight:800;flex-shrink:0;line-height:1}.step-list li:nth-child(2) .step-number{background:#fbefd9;color:#b29148}.step-list li:nth-child(3) .step-number{background:#fae9e0;color:#b87959}.step-copy strong{font-size:11px;color:#53664b;display:block;margin-bottom:3px}.step-copy p{font-size:10px;color:#969d8e;line-height:1.8}.progress-ring{height:120px;width:120px;border-radius:50%;background:conic-gradient(#78966b calc(var(--percent,0) * 1%),#edf1e6 0);margin:13px auto 21px;display:grid;place-items:center;position:relative}.progress-ring::before{content:'';position:absolute;inset:9px;background:#fffefb;border-radius:50%}.progress-ring>*{position:relative;text-align:center}.progress-ring strong{font-size:28px;font-weight:800;color:var(--green);line-height:1.2;display:block;letter-spacing:-1px}.progress-ring small{display:block;color:#9ba38e;font-size:10px;line-height:1.8}.mini-stats{display:flex;gap:10px;justify-content:space-around;border-top:1px solid #eff0e9;padding-top:16px;text-align:center}.mini-stats span,.mini-stats small{font-size:10px;color:#959d8c;display:block}.mini-stats strong{font-size:17px;font-weight:800;color:#6c815f;display:block;margin-top:4px;line-height:1.2}.note{background:#f5eddb;border:1px solid #ece4d1;color:#8b7e60;border-radius:13px;padding:16px 18px;font-size:11px;line-height:1.9}.note strong{display:block;font-size:11px;color:#897953;margin-bottom:5px}.footer{max-width:1120px;margin:45px auto 0;border-top:1px solid var(--line);padding:20px 0 29px;display:flex;gap:18px;justify-content:space-between;align-items:start;font-size:10px;line-height:1.9;color:#9b9e91}.footer strong{color:#7c8972;font-weight:650}.footer-links{display:flex;gap:14px;align-items:center;white-space:nowrap}.footer-links button{border:0;background:none;color:#8d957f;padding:0;font-size:10px}.footer-links button:hover{color:var(--green);text-decoration:underline}
+.toolbar{display:flex;gap:12px;align-items:center;margin:24px 0 21px;flex-wrap:wrap}.search-field{position:relative;flex:1;min-width:190px}.search-field input{width:100%;border:1px solid #dfe4d8;border-radius:10px;background:#fffefb;padding:12px 15px;color:var(--green);outline-offset:2px;min-height:46px}.search-field input::placeholder{color:#a2aa98;font-size:13px}.toolbar select{max-width:100%;min-height:46px;border-radius:10px;background:#fffefb;color:#65775b;padding:9px 34px 9px 14px;border:1px solid #dfe4d8;font-size:12px}.filter-tabs{display:flex;gap:6px;flex-wrap:wrap;margin:20px 0}.filter-tab{background:#fffefb;border:1px solid var(--line);color:#849079;padding:8px 13px;border-radius:7px;font-size:12px}.filter-tab.active{background:var(--green);color:white;border-color:var(--green)}.dictionary-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:15px}.character-tile{position:relative;min-height:175px;background:#fffefb;border:1px solid var(--line);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px 12px;box-shadow:var(--shadow);text-align:center}.character-tile:hover{border-color:#a8b99d;background:#fcfff7;transform:translateY(-2px)}.tile-hanja{font-family:'Kaiti','KaiTi','Batang',serif;font-size:43px;line-height:1.4;color:var(--green)}.tile-reading{font-size:13px;color:#697a5c;margin-top:7px;font-weight:650}.tile-lesson{font-size:10px;color:#a0a58f;margin-top:5px}.known-dot{position:absolute;top:11px;right:12px;font-size:10px;color:#538049}.known-dot::before{content:'✓';display:grid;place-items:center;width:18px;height:18px;background:#e7f1df;border-radius:50%;font-weight:800}.empty-state{padding:65px 24px;text-align:center;background:#fffefb;border:1px dashed #d6dece;border-radius:17px;color:#91a083}.empty-state>svg{margin-bottom:18px}.empty-state h2,.empty-state h3{color:#5b7350;font-size:20px;margin:10px 0}.empty-state p{font-size:13px;line-height:1.9;max-width:460px;margin:0 auto 21px}.review-banner{display:flex;justify-content:space-between;gap:20px;align-items:center;background:#f6ede1;border:1px solid #eadfcd;border-radius:15px;padding:25px 28px;margin:24px 0}.review-banner h2{font-size:19px;color:#8b6748;margin-bottom:7px}.review-banner p{font-size:12px;color:#9a866c}.history-list{display:grid;gap:12px}.history-item{display:flex;gap:20px;align-items:center;justify-content:space-between;background:#fffefb;border:1px solid var(--line);border-radius:13px;padding:18px 22px}.history-item h3{font-size:14px;color:var(--green);margin-bottom:4px}.history-item p,.history-item small{font-size:11px;color:#96a087}.score-badge{background:#ecf2e6;border-radius:10px;padding:10px 15px;color:#5d7d50;min-width:75px;text-align:center;font-size:19px;font-weight:800;white-space:nowrap}.score-badge small{font-size:11px;font-weight:500;color:#96a087}.button-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:20px}.settings-panel{background:#fffefb;border:1px solid var(--line);border-radius:15px;padding:25px;margin-top:28px}.settings-panel h2{font-size:18px;color:var(--green);margin-bottom:10px}.settings-panel p{font-size:12px;color:#86927b;line-height:1.9}.help-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:24px}.help-card{background:#fffefb;border:1px solid var(--line);padding:25px;border-radius:15px}.help-card h3{font-size:17px;color:var(--green);margin-bottom:12px}.help-card p,.help-card li{font-size:13px;color:#829076;line-height:1.95}.help-card ol,.help-card ul{padding-left:20px;margin:12px 0}.notice{font-size:12px;color:#8c876f;background:#f6f0df;border:1px solid #ece3c9;border-radius:10px;padding:14px 17px;margin:18px 0;line-height:1.9}.danger{color:#ae5b43!important;border-color:#e5c8b8!important}.danger:hover{background:#fff1e9!important}.small{font-size:11px}
+dialog.modal{padding:0;border:1px solid #dfe5d8;border-radius:21px;width:min(720px,calc(100vw - 32px));max-width:none;max-height:92vh;max-height:92dvh;overflow:auto;background:var(--paper);color:var(--ink);box-shadow:0 24px 100px #193b2d35}dialog.modal::backdrop{background:#1f352c70;backdrop-filter:blur(3px)}.modal-header{display:flex;justify-content:space-between;gap:18px;align-items:center;padding:21px 27px;border-bottom:1px solid var(--line);background:#fffefb;position:sticky;top:0;z-index:5}.modal-title{font-size:17px;color:var(--green);font-weight:800;letter-spacing:-.5px}.modal-subtitle{font-size:11px;color:#8e9a81;margin-top:3px}.icon-button{width:32px;height:32px;border-radius:8px;border:1px solid #e4e8dd;background:#fffefb;color:#88977b;display:grid;place-items:center;font-size:19px;flex-shrink:0;line-height:1;padding:0}.icon-button:hover{background:#edf2e7;color:var(--green)}.modal-body{padding:25px 28px 28px}.modal-footer{padding:16px 28px 21px;border-top:1px solid var(--line)}.segmented{display:flex;gap:4px;padding:4px;background:#ecefe5;border-radius:9px;margin-bottom:19px;overflow:auto}.segment{flex:1;white-space:nowrap;background:none;border:0;border-radius:6px;padding:9px 9px;color:#8a977d;font-size:11px;font-weight:650}.segment.active{background:#fffefb;color:var(--green);box-shadow:0 1px 5px #244b3b0b}.flash-meta{display:flex;justify-content:space-between;gap:12px;font-size:11px;color:#91a081;margin:10px 2px}.flashcard{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:280px;width:100%;border:1px solid #e0e5d8;border-radius:17px;background:#fffefa;color:var(--green);padding:22px;box-shadow:0 4px 0 #ebeee3;overflow:hidden;text-align:center}.flashcard::before,.flashcard::after{content:'';position:absolute;pointer-events:none;background:repeating-linear-gradient(to bottom,#bbc7ae55 0,#bbc7ae55 4px,transparent 4px,transparent 9px);width:1px;top:18px;bottom:18px;left:50%;opacity:.4}.flashcard::after{height:1px;width:auto;top:50%;left:18px;right:18px;bottom:auto;background:repeating-linear-gradient(to right,#bbc7ae55 0,#bbc7ae55 4px,transparent 4px,transparent 9px)}.flashcard:hover{border-color:#a8bd98}.flashcard>*{position:relative;z-index:1}.flash-hanja{font-family:'Kaiti','KaiTi','Batang',serif;font-size:103px;line-height:1.35;color:#35553a}.flash-answer{font-size:25px;font-weight:750;background:#fffefa;padding:0 15px;margin-top:7px;letter-spacing:-.8px}.flash-hint{font-size:11px;color:#99a58a;background:#fffefa;margin-top:12px;padding:0 10px}.flash-controls{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:18px;flex-wrap:wrap}.flash-controls .secondary{min-height:38px;font-size:12px}.card-counter{font-size:12px;color:#859779;font-weight:650}.study-progress{margin-top:22px;display:flex;align-items:center;gap:10px}.study-progress .progress-track{margin:0;flex:1}.study-progress span{font-size:10px;color:#8f9c83;white-space:nowrap}.keyboard-hint{margin-top:17px;text-align:center;font-size:10px;color:#a2ac97;line-height:1.8}.keyboard-hint kbd{display:inline-block;border:1px solid #dfe5d7;border-radius:4px;background:#fffefb;padding:0 5px;font:inherit;color:#7e9273;margin:0 2px}.quiz-setup{padding:3px 0}.quiz-setup>p{font-size:13px;color:#8b987e;margin-bottom:25px}.form-label{font-size:13px;font-weight:750;color:#5e7651;margin:20px 0 10px;display:block}.choice-row{display:flex;gap:9px;flex-wrap:wrap}.choice-button{flex:1;min-width:90px;min-height:50px;border:1px solid #dfe5d8;border-radius:10px;background:#fffefb;color:#859579;padding:12px 11px;font-size:12px;line-height:1.6}.choice-button small{display:block;font-size:10px;font-weight:400;color:#9aa58d;margin-top:3px}.choice-button.selected{background:#ecf2e5;border:1px solid #93ad7e;color:#466e36;box-shadow:inset 0 0 0 1px #93ad7e;font-weight:700}.quiz-setup>.primary{width:100%;margin-top:28px}.quiz-top{display:flex;justify-content:space-between;gap:15px;align-items:center;font-size:11px;color:#87967c;margin-bottom:12px}.quiz-top .quiz-score{color:#6f8d60;font-size:11px;font-weight:650}.quiz-card{background:#fffefa;border:1px solid #e2e7d9;border-radius:16px;text-align:center;min-height:205px;padding:23px 15px;display:flex;flex-direction:column;justify-content:center;align-items:center;margin-top:17px}.quiz-card>p{font-size:12px;color:#899b7c;margin-bottom:12px}.question-hanja{font-family:'Kaiti','KaiTi','Batang',serif;font-size:81px;color:var(--green);line-height:1.35}.question-reading{font-size:32px;font-weight:750;color:var(--green);letter-spacing:-1.2px;line-height:1.5}.quiz-options{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:18px}.option{display:flex;gap:13px;align-items:center;min-height:60px;border:1px solid #dee5d4;border-radius:10px;padding:12px 16px;background:#fffefa;text-align:left;color:#506b45;font-size:15px;font-weight:650;line-height:1.4}.option:hover:not(:disabled){background:#f0f5e9;border-color:#a0b58c}.option-number{width:24px;height:24px;display:inline-grid;place-items:center;background:#f0f3e9;color:#9aa68c;font-size:11px;border-radius:6px;flex-shrink:0;font-weight:650}.option:disabled{opacity:1;cursor:default}.option.correct{border-color:#81a66e;background:#eaf3e3;color:#426b32}.option.correct .option-number{color:white;background:#81a66e}.option.incorrect{border-color:#ce8e70;background:#fcf0e7;color:#b56d4e}.option.incorrect .option-number{color:white;background:#ce8e70}.option .hanja{font-size:32px;font-weight:400;line-height:1.1}.feedback{margin-top:18px;border-radius:10px;padding:13px 16px;font-size:13px;line-height:1.9}.feedback.success{color:#537743;background:#eaf1e3;border:1px solid #dce8d1}.feedback.error{color:#aa7253;background:#f8ebdf;border:1px solid #eddac9}.feedback strong{font-weight:750}.feedback p{font-size:12px}.feedback .primary{margin-top:12px;min-height:35px;padding:8px 15px;font-size:12px}.result-screen{text-align:center;padding:8px 0}.result-emblem{width:75px;height:75px;border-radius:50%;background:#f8ecd0;color:#a8863b;display:grid;place-items:center;margin:5px auto 18px;font-size:34px}.result-screen h2{font-size:24px;color:var(--green);margin-bottom:12px}.result-screen>p{font-size:13px;line-height:1.9;color:#91a07f}.result-score{font-size:50px;font-weight:800;letter-spacing:-2px;color:var(--green);line-height:1.4;margin-top:15px}.result-score small{font-size:19px;letter-spacing:0;color:#a2ac95;font-weight:500}.result-summary{display:flex;justify-content:center;gap:30px;padding:18px 0 24px;font-size:12px;color:#8c9b7f}.result-summary strong{color:#617d51;font-size:16px;margin-left:5px}.result-screen .button-row{justify-content:center}.result-list{text-align:left;margin-top:25px;border-top:1px solid var(--line);padding-top:18px}.result-list h3{font-size:14px;color:#788968;margin-bottom:10px}.result-row{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:12px 8px;border-bottom:1px solid #e9eee0;font-size:12px;color:#94a184}.result-row .hanja{font-size:26px;color:#547345;min-width:35px}.result-row strong{color:#728b5f}.toast{position:fixed;z-index:100;bottom:25px;left:50%;transform:translateX(-50%);background:var(--green);color:#fffef5;border:1px solid #456c42;border-radius:12px;padding:12px 21px;max-width:calc(100vw - 28px);font-size:12px;line-height:1.7;box-shadow:0 5px 30px #244b3b30;text-align:center;pointer-events:none}.toast:empty{display:none}.full-width{width:100%}[hidden]{display:none!important}.page-enter{animation:rise-in .3s ease-out}@keyframes rise-in{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@media(min-width:1350px){.hero{padding:41px 48px;min-height:341px}.hero h1{font-size:48px}}
+@media(max-width:1050px){.header-inner{padding:16px 28px;gap:17px}.header-inner nav{gap:2px}.nav-button{padding:9px 10px;font-size:12px}.brand-name{font-size:18px}.brand-sub{font-size:9px}.storage-pill{font-size:10px}.container{padding:30px 28px 0}.hero{padding:30px}.hero h1{font-size:40px}.journey-layout{grid-template-columns:minmax(0,1fr) 240px;gap:19px}.group-card{padding:18px}.sample-characters span{font-size:21px}.side-card{padding:19px}.footer{margin:38px 28px 0}.dictionary-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:860px){.storage-pill{display:none}.hero{grid-template-columns:1.25fr .9fr;gap:5px}.hero h1{font-size:36px;letter-spacing:-2px}.hero-art{max-width:280px}.hero-copy>p{font-size:12px}.hero-actions{gap:12px}.hero-actions .primary{font-size:12px;padding:11px 14px}.stats-grid3{gap:11px}.stat-card{padding:16px;gap:11px}.stat-icon{width:35px;height:35px;font-size:18px}.stat-value{font-size:21px}.journey-layout{grid-template-columns:1fr}.side-stack{grid-template-columns:1fr 1fr}.side-stack .note{grid-column:1/-1}.group-card{padding:22px}.sample-characters span{font-size:26px}.side-card h3{margin-bottom:15px}.step-list{gap:14px}.side-card .progress-ring{height:105px;width:105px;margin:5px auto 12px}.mini-stats{padding-top:12px}.dictionary-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:650px){body{font-size:14px}.header-inner{padding:16px 20px 0;min-height:104px;gap:0;display:block}.brand{margin-bottom:11px}.brand-mark{width:34px;height:37px;border-radius:10px;font-size:22px}.brand-name{font-size:17px}.brand-sub{font-size:8px;letter-spacing:1.1px}.header-inner nav{display:flex;overflow-x:auto;gap:4px;white-space:nowrap;margin:0 -4px;padding:0 0 10px;scrollbar-width:none;justify-content:space-between}.header-inner nav::-webkit-scrollbar{display:none}.nav-button{font-size:12px;padding:8px 10px;border-radius:7px}.container{padding:23px 20px 0}.hero{padding:27px 24px 20px;grid-template-columns:1fr;gap:7px;border-radius:18px;min-height:0}.hero h1{font-size:34px;letter-spacing:-2px;line-height:1.3;margin-bottom:12px}.hero-copy .eyebrow{font-size:9px;margin-bottom:15px;padding:4px 8px}.hero-copy>p{font-size:12px;line-height:1.85}.hero-actions{gap:16px;margin-top:20px}.hero-actions .primary{font-size:12px;min-height:43px;padding:11px 14px}.hero-art{position:absolute;right:-33px;bottom:-33px;max-width:195px;opacity:.12;pointer-events:none}.hero-copy{padding-bottom:6px}.hero-footnote{font-size:9px;margin-top:12px}.stats-grid3{gap:8px;margin:15px 0 28px}.stat-card{padding:14px 8px;display:flex;flex-direction:column;gap:7px;text-align:center;border-radius:11px}.stat-icon{width:29px;height:29px;font-size:15px;border-radius:9px}.stat-value{font-size:21px}.stat-value small{font-size:11px;margin-left:2px}.stat-label{font-size:9px;margin-top:2px}.section-heading{align-items:start;margin-bottom:15px;gap:10px}.section-heading h2{font-size:19px}.section-heading p{font-size:11px;line-height:1.8}.section-heading>.muted{font-size:9px;margin-top:4px}.group-grid{gap:11px}.group-card{padding:15px 13px;border-radius:12px}.group-top{margin-bottom:10px}.group-number{font-size:8px;letter-spacing:.08em}.group-status{font-size:8px;padding:2px 6px}.group-range{font-size:17px}.group-name{font-size:9px}.sample-characters{gap:2px;margin:17px 0 12px;flex-wrap:wrap}.sample-characters span{font-size:21px}.group-meta{font-size:9px;flex-wrap:wrap}.group-actions{display:flex;flex-direction:column;gap:5px;margin-top:13px;padding-top:12px}.group-actions .secondary{font-size:10px;min-height:34px}.quiz-link{font-size:10px;min-height:29px;padding:5px}.side-stack{gap:11px}.side-card{padding:17px 14px;border-radius:12px}.side-card h3{font-size:13px}.step-list{gap:14px}.step-list li{gap:8px}.step-number{width:20px;height:20px;font-size:9px;border-radius:5px}.step-copy strong{font-size:10px}.step-copy p{font-size:9px;line-height:1.75}.side-card .progress-ring{width:92px;height:92px;margin:11px auto 17px}.progress-ring strong{font-size:24px}.progress-ring small{font-size:9px}.mini-stats{gap:4px;padding-top:13px}.mini-stats span,.mini-stats small{font-size:8px}.mini-stats strong{font-size:15px}.note{font-size:10px;padding:15px}.note strong{font-size:10px}.footer{margin:30px 20px 0;flex-direction:column;gap:10px;padding:19px 0 24px;font-size:9px}.footer-links{gap:18px}.footer-links button{font-size:10px}.page-heading{font-size:27px}.page-intro p{font-size:12px;line-height:1.9}.toolbar{gap:8px;margin-top:20px}.search-field{flex-basis:100%}.toolbar select{flex:1;font-size:11px;padding-left:10px}.filter-tabs{gap:5px}.filter-tab{font-size:10px;padding:7px 10px}.dictionary-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.character-tile{min-height:144px;padding:18px 7px 14px;border-radius:11px}.tile-hanja{font-size:36px}.tile-reading{font-size:11px;margin-top:5px}.tile-lesson{font-size:9px}.known-dot{top:7px;right:7px}.known-dot::before{height:15px;width:15px;font-size:9px}.review-banner{padding:20px;align-items:start;flex-direction:column;gap:14px}.review-banner h2{font-size:17px}.review-banner p{font-size:11px;line-height:1.9}.review-banner .primary{font-size:12px;min-height:38px}.history-item{padding:16px;gap:12px}.history-item h3{font-size:12px}.history-item p,.history-item small{font-size:10px}.score-badge{min-width:65px;padding:9px 11px;font-size:18px}.score-badge small{font-size:9px}.settings-panel{padding:20px}.settings-panel h2{font-size:16px}.settings-panel p{font-size:11px}.help-grid{grid-template-columns:1fr;gap:13px}.help-card{padding:20px}.help-card h3{font-size:15px}.help-card p,.help-card li{font-size:12px}.button-row .primary,.button-row .secondary{font-size:11px;min-height:38px;padding:10px 13px}.notice{font-size:11px}.empty-state{padding:45px 19px}.empty-state h2,.empty-state h3{font-size:18px}.empty-state p{font-size:12px}dialog.modal{width:calc(100vw - 20px);max-height:95vh;max-height:95dvh;border-radius:16px}.modal-header{padding:17px 19px;gap:10px}.modal-title{font-size:15px}.modal-subtitle{font-size:10px}.modal-body{padding:19px 18px 22px}.modal-footer{padding:14px 18px 17px}.segmented{gap:3px;padding:3px;margin-bottom:15px}.segment{font-size:10px;padding:8px 6px}.flash-meta{font-size:10px}.flashcard{min-height:255px;border-radius:13px}.flash-hanja{font-size:90px}.flash-answer{font-size:22px}.flash-hint{font-size:10px}.flash-controls{gap:7px}.flash-controls .secondary{font-size:11px;padding:9px 11px}.flash-controls .primary{font-size:11px;padding:10px 12px;min-height:38px}.card-counter{font-size:11px}.keyboard-hint{display:none}.quiz-setup>p{font-size:12px;margin-bottom:20px}.form-label{font-size:12px;margin-top:19px}.choice-row{gap:7px}.choice-button{font-size:11px;min-width:80px;padding:10px 8px}.choice-button small{font-size:9px}.quiz-setup>.primary{margin-top:23px}.quiz-top{font-size:10px}.quiz-card{min-height:184px;margin-top:14px;padding:21px 12px}.quiz-card>p{font-size:11px}.question-hanja{font-size:73px}.question-reading{font-size:27px}.quiz-options{gap:9px;margin-top:15px}.option{padding:12px 10px;gap:8px;font-size:13px;min-height:59px}.option-number{width:21px;height:21px;border-radius:5px;font-size:10px}.option .hanja{font-size:29px}.feedback{font-size:12px;padding:12px 13px}.feedback p{font-size:11px}.result-screen h2{font-size:22px}.result-screen>p{font-size:12px}.result-emblem{width:66px;height:66px;font-size:30px}.result-score{font-size:44px}.result-score small{font-size:17px}.result-summary{gap:22px;font-size:11px}.result-summary strong{font-size:15px}.result-row{font-size:11px}.result-row .hanja{font-size:24px}.toast{font-size:11px;padding:11px 15px;bottom:18px}}
+@media(max-width:365px){.container{padding-left:15px;padding-right:15px}.header-inner{padding-left:15px;padding-right:15px}.nav-button{padding-left:8px;padding-right:8px;font-size:11px}.hero{padding-left:20px;padding-right:20px}.hero h1{font-size:32px}.hero-actions{gap:13px}.hero-actions .text-link{font-size:11px}.group-card{padding-left:11px;padding-right:11px}.sample-characters span{font-size:19px}.group-range{font-size:16px}.group-status{font-size:7px}.option{font-size:12px;gap:6px;padding-left:9px;padding-right:9px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+@media print{body{background:white;color:#111}.site-header,.hero,.footer,.toolbar,.filter-tabs,.review-banner,.button-row,.toast,dialog,.side-stack{display:none!important}.container{padding:0;max-width:none}.dictionary-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.character-tile{break-inside:avoid;min-height:120px;border:1px solid #bbb;box-shadow:none}.tile-hanja{font-size:33px;color:#111}.tile-reading{font-size:11px;color:#111}.tile-lesson{color:#666}.known-dot{display:none}.page-heading{font-size:24px;color:#111}.group-card{break-inside:avoid;box-shadow:none}.group-actions{display:none}.journey-layout{display:block}}
+
+/* Readable secondary text and clear keyboard navigation. */
+.skip-link{position:fixed;top:8px;left:12px;z-index:150;transform:translateY(-170%);padding:12px 18px;background:var(--green);color:white;border-radius:8px;text-decoration:none}.skip-link:focus{transform:none}
+.study-actions{justify-content:space-between}.study-actions .text-link{display:inline-flex;gap:5px;align-items:center}
+.stat-label,.group-name,.group-meta,.tile-lesson,.modal-subtitle,.flash-meta,.flash-hint,.card-counter,.keyboard-hint,.study-progress span,.history-item p,.history-item small,.footer,.footer-links button,.hero-footnote,.step-copy p,.side-card>p,.mini-stats span,.mini-stats small,.progress-ring small,.quiz-top,.quiz-card>p,.result-screen>p,.result-summary,.settings-panel p,.help-card p,.help-card li,.result-row,.segment,.filter-tab,.group-number,.quiz-setup>p{color:#63725c}
+.group-status{color:#63725c}.choice-button{color:#5e7154}.choice-button small{color:#65705c}.search-field input::placeholder{color:#65705c}.nav-button{color:#5f6e59}.text-link{color:#48633e}.footer strong{color:#5f6e59}.note,.note strong{color:#746444}.review-banner p{color:#7d694e}.option-number{color:#63725c}.result-score small{color:#63725c}.result-summary strong,.result-row strong{color:#526e43}.modal-title:focus,.quiz-card:focus,.result-screen:focus,#main:focus{outline:none}
+@media(pointer:coarse){.nav-button,.text-link,.quiz-link,.icon-button,.filter-tab,.segment,.footer-links button{min-height:44px}.icon-button{width:44px}.toolbar input,.toolbar select{font-size:16px}.group-actions .secondary{min-height:44px}.flash-controls .secondary{min-height:44px}}
+
+/* Reading edition: explicit self-reading instructions and answer reveal. */
+.reading-instruction{margin:0 0 14px;padding:11px 15px;background:#edf2e7;border:1px solid #dfe7d6;border-radius:9px;color:#5b7550;font-size:12px;font-weight:650;line-height:1.8;text-align:center}.reading-reveal{display:flex;justify-content:center;margin:18px 0 6px}.reading-reveal button{min-width:185px;min-height:45px}.reading-example{display:flex;gap:22px;align-items:center;justify-content:center;margin:4px 0 22px;padding:20px;border:1px solid #dfe6d6;background:#fffefa;border-radius:13px;color:#6a815e}.reading-example .hanja{font-size:54px;line-height:1.2;color:var(--green)}.reading-example strong{font-size:24px;color:var(--green);font-weight:750}.reading-example>span:not(.hanja){font-size:22px;color:#9aac8c}.study-actions .secondary[aria-pressed="true"]{background:#e6efde;border-color:#9bb58a;color:#426634}.quiz-reading-option{word-break:keep-all}@media(max-width:650px){.reading-instruction{font-size:10px;padding:10px 8px}.reading-example{gap:17px;padding:17px}.reading-example .hanja{font-size:46px}.reading-example strong{font-size:22px}.reading-reveal button{min-height:43px;min-width:175px}}
+
+.reading-gate{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:23px;text-align:center}.reading-gate .primary{min-height:47px;padding:13px 25px;font-size:14px}.reading-gate p{font-size:11px;color:#8a9b7d}.quiz-card:focus-visible{outline-offset:3px}@media(max-width:650px){.reading-gate{margin-top:20px}.reading-gate .primary{font-size:13px;padding:12px 19px}.reading-gate p{font-size:10px}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">본문으로 이동</a>
+<header class="site-header"><div class="header-inner">
+<button class="brand" data-action="nav" data-page="home" aria-label="한자 한 걸음 공부방으로"><span class="brand-mark">字</span><span><span class="brand-name">한자 한 걸음</span><span class="brand-sub">하루하루, 차곡차곡</span></span></button>
+<nav aria-label="주 메뉴"><button class="nav-button active" data-action="nav" data-page="home">공부방</button><button class="nav-button" data-action="nav" data-page="dictionary">한자 모아보기</button><button class="nav-button" data-action="nav" data-page="review">오답 노트 <span class="badge" id="wrong-count" hidden>0</span></button><button class="nav-button" data-action="nav" data-page="history">학습 기록</button></nav>
+<span class="storage-pill" id="storage-status">이 브라우저에 저장돼요</span>
+</div></header>
+<main class="container" id="main" tabindex="-1"></main>
+<footer class="footer"><div><strong>한자 한 걸음</strong> · 작은 배움이 모여 큰 실력이 됩니다.<br>첨부 학습지의 300자 · 뜻과 대표 음은 학습지 기준 · 읽기 기록은 이 브라우저에 저장</div><div class="footer-links"><button data-action="nav" data-page="help">사용 안내</button><button data-action="export">기록 백업</button></div></footer>
+<dialog class="modal" id="learning-modal" aria-labelledby="modal-title"><div id="modal-content"></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<input type="file" id="backup-input" accept="application/json,.json" hidden>
+<noscript><p style="padding:24px">이 학습 사이트는 브라우저의 JavaScript를 켜야 사용할 수 있어요. 이 웹주소를 Chrome, Edge, Safari 등의 브라우저에서 열어 주세요.</p></noscript>
+<script id="hanja-data" type="application/json">[
+  {
+    "id": 1,
+    "hanja": "家",
+    "meaning": "집",
+    "sound": "가",
+    "lesson": 1,
+    "group": 1
+  },
+  {
+    "id": 2,
+    "hanja": "歌",
+    "meaning": "노래",
+    "sound": "가",
+    "lesson": 1,
+    "group": 1
+  },
+  {
+    "id": 3,
+    "hanja": "間",
+    "meaning": "사이",
+    "sound": "간",
+    "lesson": 1,
+    "group": 1
+  },
+  {
+    "id": 4,
+    "hanja": "江",
+    "meaning": "강",
+    "sound": "강",
+    "lesson": 1,
+    "group": 1
+  },
+  {
+    "id": 5,
+    "hanja": "車",
+    "meaning": "수레",
+    "sound": "거",
+    "lesson": 1,
+    "group": 1
+  },
+  {
+    "id": 6,
+    "hanja": "工",
+    "meaning": "장인",
+    "sound": "공",
+    "lesson": 1,
+    "group": 1
+  },
+  {
+    "id": 7,
+    "hanja": "空",
+    "meaning": "빌",
+    "sound": "공",
+    "lesson": 1,
+    "group": 1
+  },
+  {
+    "id": 8,
+    "hanja": "校",
+    "meaning": "학교",
+    "sound": "교",
+    "lesson": 1,
+    "group": 1
+  },
+  {
+    "id": 9,
+    "hanja": "敎",
+    "meaning": "가르칠",
+    "sound": "교",
+    "lesson": 1,
+    "group": 1
+  },
+  {
+    "id": 10,
+    "hanja": "口",
+    "meaning": "입",
+    "sound": "구",
+    "lesson": 1,
+    "group": 1
+  },
+  {
+    "id": 11,
+    "hanja": "九",
+    "meaning": "아홉",
+    "sound": "구",
+    "lesson": 2,
+    "group": 1
+  },
+  {
+    "id": 12,
+    "hanja": "國",
+    "meaning": "나라",
+    "sound": "국",
+    "lesson": 2,
+    "group": 1
+  },
+  {
+    "id": 13,
+    "hanja": "軍",
+    "meaning": "군사",
+    "sound": "군",
+    "lesson": 2,
+    "group": 1
+  },
+  {
+    "id": 14,
+    "hanja": "金",
+    "meaning": "쇠",
+    "sound": "금",
+    "lesson": 2,
+    "group": 1
+  },
+  {
+    "id": 15,
+    "hanja": "氣",
+    "meaning": "기운",
+    "sound": "기",
+    "lesson": 2,
+    "group": 1
+  },
+  {
+    "id": 16,
+    "hanja": "記",
+    "meaning": "기록할",
+    "sound": "기",
+    "lesson": 2,
+    "group": 1
+  },
+  {
+    "id": 17,
+    "hanja": "旗",
+    "meaning": "깃발",
+    "sound": "기",
+    "lesson": 2,
+    "group": 1
+  },
+  {
+    "id": 18,
+    "hanja": "南",
+    "meaning": "남녘",
+    "sound": "남",
+    "lesson": 2,
+    "group": 1
+  },
+  {
+    "id": 19,
+    "hanja": "男",
+    "meaning": "사내",
+    "sound": "남",
+    "lesson": 2,
+    "group": 1
+  },
+  {
+    "id": 20,
+    "hanja": "內",
+    "meaning": "안",
+    "sound": "내",
+    "lesson": 2,
+    "group": 1
+  },
+  {
+    "id": 21,
+    "hanja": "女",
+    "meaning": "여자",
+    "sound": "녀",
+    "lesson": 3,
+    "group": 1
+  },
+  {
+    "id": 22,
+    "hanja": "年",
+    "meaning": "해",
+    "sound": "년",
+    "lesson": 3,
+    "group": 1
+  },
+  {
+    "id": 23,
+    "hanja": "農",
+    "meaning": "농사",
+    "sound": "농",
+    "lesson": 3,
+    "group": 1
+  },
+  {
+    "id": 24,
+    "hanja": "答",
+    "meaning": "대답",
+    "sound": "답",
+    "lesson": 3,
+    "group": 1
+  },
+  {
+    "id": 25,
+    "hanja": "大",
+    "meaning": "큰",
+    "sound": "대",
+    "lesson": 3,
+    "group": 1
+  },
+  {
+    "id": 26,
+    "hanja": "道",
+    "meaning": "길",
+    "sound": "도",
+    "lesson": 3,
+    "group": 1
+  },
+  {
+    "id": 27,
+    "hanja": "同",
+    "meaning": "한가지",
+    "sound": "동",
+    "lesson": 3,
+    "group": 1
+  },
+  {
+    "id": 28,
+    "hanja": "冬",
+    "meaning": "겨울",
+    "sound": "동",
+    "lesson": 3,
+    "group": 1
+  },
+  {
+    "id": 29,
+    "hanja": "東",
+    "meaning": "동녘",
+    "sound": "동",
+    "lesson": 3,
+    "group": 1
+  },
+  {
+    "id": 30,
+    "hanja": "洞",
+    "meaning": "골",
+    "sound": "동",
+    "lesson": 3,
+    "group": 1
+  },
+  {
+    "id": 31,
+    "hanja": "動",
+    "meaning": "움직일",
+    "sound": "동",
+    "lesson": 4,
+    "group": 2
+  },
+  {
+    "id": 32,
+    "hanja": "登",
+    "meaning": "오를",
+    "sound": "등",
+    "lesson": 4,
+    "group": 2
+  },
+  {
+    "id": 33,
+    "hanja": "來",
+    "meaning": "올",
+    "sound": "래",
+    "lesson": 4,
+    "group": 2
+  },
+  {
+    "id": 34,
+    "hanja": "力",
+    "meaning": "힘",
+    "sound": "력",
+    "lesson": 4,
+    "group": 2
+  },
+  {
+    "id": 35,
+    "hanja": "老",
+    "meaning": "늙을",
+    "sound": "로",
+    "lesson": 4,
+    "group": 2
+  },
+  {
+    "id": 36,
+    "hanja": "六",
+    "meaning": "여섯",
+    "sound": "륙",
+    "lesson": 4,
+    "group": 2
+  },
+  {
+    "id": 37,
+    "hanja": "里",
+    "meaning": "마을",
+    "sound": "리",
+    "lesson": 4,
+    "group": 2
+  },
+  {
+    "id": 38,
+    "hanja": "林",
+    "meaning": "수풀",
+    "sound": "림",
+    "lesson": 4,
+    "group": 2
+  },
+  {
+    "id": 39,
+    "hanja": "立",
+    "meaning": "설",
+    "sound": "립",
+    "lesson": 4,
+    "group": 2
+  },
+  {
+    "id": 40,
+    "hanja": "萬",
+    "meaning": "일만",
+    "sound": "만",
+    "lesson": 4,
+    "group": 2
+  },
+  {
+    "id": 41,
+    "hanja": "每",
+    "meaning": "매양",
+    "sound": "매",
+    "lesson": 5,
+    "group": 2
+  },
+  {
+    "id": 42,
+    "hanja": "面",
+    "meaning": "낯",
+    "sound": "면",
+    "lesson": 5,
+    "group": 2
+  },
+  {
+    "id": 43,
+    "hanja": "名",
+    "meaning": "이름",
+    "sound": "명",
+    "lesson": 5,
+    "group": 2
+  },
+  {
+    "id": 44,
+    "hanja": "命",
+    "meaning": "목숨",
+    "sound": "명",
+    "lesson": 5,
+    "group": 2
+  },
+  {
+    "id": 45,
+    "hanja": "母",
+    "meaning": "어미",
+    "sound": "모",
+    "lesson": 5,
+    "group": 2
+  },
+  {
+    "id": 46,
+    "hanja": "木",
+    "meaning": "나무",
+    "sound": "목",
+    "lesson": 5,
+    "group": 2
+  },
+  {
+    "id": 47,
+    "hanja": "文",
+    "meaning": "글월",
+    "sound": "문",
+    "lesson": 5,
+    "group": 2
+  },
+  {
+    "id": 48,
+    "hanja": "門",
+    "meaning": "문",
+    "sound": "문",
+    "lesson": 5,
+    "group": 2
+  },
+  {
+    "id": 49,
+    "hanja": "問",
+    "meaning": "물을",
+    "sound": "문",
+    "lesson": 5,
+    "group": 2
+  },
+  {
+    "id": 50,
+    "hanja": "物",
+    "meaning": "물건",
+    "sound": "물",
+    "lesson": 5,
+    "group": 2
+  },
+  {
+    "id": 51,
+    "hanja": "民",
+    "meaning": "백성",
+    "sound": "민",
+    "lesson": 6,
+    "group": 2
+  },
+  {
+    "id": 52,
+    "hanja": "方",
+    "meaning": "모",
+    "sound": "방",
+    "lesson": 6,
+    "group": 2
+  },
+  {
+    "id": 53,
+    "hanja": "白",
+    "meaning": "흰",
+    "sound": "백",
+    "lesson": 6,
+    "group": 2
+  },
+  {
+    "id": 54,
+    "hanja": "百",
+    "meaning": "일백",
+    "sound": "백",
+    "lesson": 6,
+    "group": 2
+  },
+  {
+    "id": 55,
+    "hanja": "父",
+    "meaning": "아비",
+    "sound": "부",
+    "lesson": 6,
+    "group": 2
+  },
+  {
+    "id": 56,
+    "hanja": "夫",
+    "meaning": "지아비",
+    "sound": "부",
+    "lesson": 6,
+    "group": 2
+  },
+  {
+    "id": 57,
+    "hanja": "北",
+    "meaning": "북녘",
+    "sound": "북",
+    "lesson": 6,
+    "group": 2
+  },
+  {
+    "id": 58,
+    "hanja": "不",
+    "meaning": "아닐",
+    "sound": "불",
+    "lesson": 6,
+    "group": 2
+  },
+  {
+    "id": 59,
+    "hanja": "四",
+    "meaning": "넉",
+    "sound": "사",
+    "lesson": 6,
+    "group": 2
+  },
+  {
+    "id": 60,
+    "hanja": "事",
+    "meaning": "일",
+    "sound": "사",
+    "lesson": 6,
+    "group": 2
+  },
+  {
+    "id": 61,
+    "hanja": "山",
+    "meaning": "메",
+    "sound": "산",
+    "lesson": 7,
+    "group": 3
+  },
+  {
+    "id": 62,
+    "hanja": "算",
+    "meaning": "셈",
+    "sound": "산",
+    "lesson": 7,
+    "group": 3
+  },
+  {
+    "id": 63,
+    "hanja": "三",
+    "meaning": "석",
+    "sound": "삼",
+    "lesson": 7,
+    "group": 3
+  },
+  {
+    "id": 64,
+    "hanja": "上",
+    "meaning": "윗",
+    "sound": "상",
+    "lesson": 7,
+    "group": 3
+  },
+  {
+    "id": 65,
+    "hanja": "色",
+    "meaning": "빛",
+    "sound": "색",
+    "lesson": 7,
+    "group": 3
+  },
+  {
+    "id": 66,
+    "hanja": "生",
+    "meaning": "날",
+    "sound": "생",
+    "lesson": 7,
+    "group": 3
+  },
+  {
+    "id": 67,
+    "hanja": "西",
+    "meaning": "서녘",
+    "sound": "서",
+    "lesson": 7,
+    "group": 3
+  },
+  {
+    "id": 68,
+    "hanja": "夕",
+    "meaning": "저녁",
+    "sound": "석",
+    "lesson": 7,
+    "group": 3
+  },
+  {
+    "id": 69,
+    "hanja": "先",
+    "meaning": "먼저",
+    "sound": "선",
+    "lesson": 7,
+    "group": 3
+  },
+  {
+    "id": 70,
+    "hanja": "姓",
+    "meaning": "성씨",
+    "sound": "성",
+    "lesson": 7,
+    "group": 3
+  },
+  {
+    "id": 71,
+    "hanja": "世",
+    "meaning": "세상",
+    "sound": "세",
+    "lesson": 8,
+    "group": 3
+  },
+  {
+    "id": 72,
+    "hanja": "小",
+    "meaning": "작을",
+    "sound": "소",
+    "lesson": 8,
+    "group": 3
+  },
+  {
+    "id": 73,
+    "hanja": "少",
+    "meaning": "적을",
+    "sound": "소",
+    "lesson": 8,
+    "group": 3
+  },
+  {
+    "id": 74,
+    "hanja": "所",
+    "meaning": "바",
+    "sound": "소",
+    "lesson": 8,
+    "group": 3
+  },
+  {
+    "id": 75,
+    "hanja": "水",
+    "meaning": "물",
+    "sound": "수",
+    "lesson": 8,
+    "group": 3
+  },
+  {
+    "id": 76,
+    "hanja": "手",
+    "meaning": "손",
+    "sound": "수",
+    "lesson": 8,
+    "group": 3
+  },
+  {
+    "id": 77,
+    "hanja": "數",
+    "meaning": "셈",
+    "sound": "수",
+    "lesson": 8,
+    "group": 3
+  },
+  {
+    "id": 78,
+    "hanja": "市",
+    "meaning": "저자",
+    "sound": "시",
+    "lesson": 8,
+    "group": 3
+  },
+  {
+    "id": 79,
+    "hanja": "時",
+    "meaning": "때",
+    "sound": "시",
+    "lesson": 8,
+    "group": 3
+  },
+  {
+    "id": 80,
+    "hanja": "食",
+    "meaning": "밥",
+    "sound": "식",
+    "lesson": 8,
+    "group": 3
+  },
+  {
+    "id": 81,
+    "hanja": "植",
+    "meaning": "심을",
+    "sound": "식",
+    "lesson": 9,
+    "group": 3
+  },
+  {
+    "id": 82,
+    "hanja": "室",
+    "meaning": "집",
+    "sound": "실",
+    "lesson": 9,
+    "group": 3
+  },
+  {
+    "id": 83,
+    "hanja": "心",
+    "meaning": "마음",
+    "sound": "심",
+    "lesson": 9,
+    "group": 3
+  },
+  {
+    "id": 84,
+    "hanja": "十",
+    "meaning": "열",
+    "sound": "십",
+    "lesson": 9,
+    "group": 3
+  },
+  {
+    "id": 85,
+    "hanja": "安",
+    "meaning": "편안",
+    "sound": "안",
+    "lesson": 9,
+    "group": 3
+  },
+  {
+    "id": 86,
+    "hanja": "語",
+    "meaning": "말씀",
+    "sound": "어",
+    "lesson": 9,
+    "group": 3
+  },
+  {
+    "id": 87,
+    "hanja": "然",
+    "meaning": "그럴",
+    "sound": "연",
+    "lesson": 9,
+    "group": 3
+  },
+  {
+    "id": 88,
+    "hanja": "五",
+    "meaning": "다섯",
+    "sound": "오",
+    "lesson": 9,
+    "group": 3
+  },
+  {
+    "id": 89,
+    "hanja": "午",
+    "meaning": "낮",
+    "sound": "오",
+    "lesson": 9,
+    "group": 3
+  },
+  {
+    "id": 90,
+    "hanja": "王",
+    "meaning": "임금",
+    "sound": "왕",
+    "lesson": 9,
+    "group": 3
+  },
+  {
+    "id": 91,
+    "hanja": "外",
+    "meaning": "바깥",
+    "sound": "외",
+    "lesson": 10,
+    "group": 4
+  },
+  {
+    "id": 92,
+    "hanja": "右",
+    "meaning": "오른",
+    "sound": "우",
+    "lesson": 10,
+    "group": 4
+  },
+  {
+    "id": 93,
+    "hanja": "月",
+    "meaning": "달",
+    "sound": "월",
+    "lesson": 10,
+    "group": 4
+  },
+  {
+    "id": 94,
+    "hanja": "有",
+    "meaning": "있을",
+    "sound": "유",
+    "lesson": 10,
+    "group": 4
+  },
+  {
+    "id": 95,
+    "hanja": "育",
+    "meaning": "기를",
+    "sound": "육",
+    "lesson": 10,
+    "group": 4
+  },
+  {
+    "id": 96,
+    "hanja": "邑",
+    "meaning": "고을",
+    "sound": "읍",
+    "lesson": 10,
+    "group": 4
+  },
+  {
+    "id": 97,
+    "hanja": "二",
+    "meaning": "두",
+    "sound": "이",
+    "lesson": 10,
+    "group": 4
+  },
+  {
+    "id": 98,
+    "hanja": "人",
+    "meaning": "사람",
+    "sound": "인",
+    "lesson": 10,
+    "group": 4
+  },
+  {
+    "id": 99,
+    "hanja": "一",
+    "meaning": "한",
+    "sound": "일",
+    "lesson": 10,
+    "group": 4
+  },
+  {
+    "id": 100,
+    "hanja": "日",
+    "meaning": "날",
+    "sound": "일",
+    "lesson": 10,
+    "group": 4
+  },
+  {
+    "id": 101,
+    "hanja": "入",
+    "meaning": "들",
+    "sound": "입",
+    "lesson": 11,
+    "group": 4
+  },
+  {
+    "id": 102,
+    "hanja": "自",
+    "meaning": "스스로",
+    "sound": "자",
+    "lesson": 11,
+    "group": 4
+  },
+  {
+    "id": 103,
+    "hanja": "子",
+    "meaning": "아들",
+    "sound": "자",
+    "lesson": 11,
+    "group": 4
+  },
+  {
+    "id": 104,
+    "hanja": "字",
+    "meaning": "글자",
+    "sound": "자",
+    "lesson": 11,
+    "group": 4
+  },
+  {
+    "id": 105,
+    "hanja": "長",
+    "meaning": "길",
+    "sound": "장",
+    "lesson": 11,
+    "group": 4
+  },
+  {
+    "id": 106,
+    "hanja": "場",
+    "meaning": "마당",
+    "sound": "장",
+    "lesson": 11,
+    "group": 4
+  },
+  {
+    "id": 107,
+    "hanja": "電",
+    "meaning": "번개",
+    "sound": "전",
+    "lesson": 11,
+    "group": 4
+  },
+  {
+    "id": 108,
+    "hanja": "全",
+    "meaning": "온전",
+    "sound": "전",
+    "lesson": 11,
+    "group": 4
+  },
+  {
+    "id": 109,
+    "hanja": "前",
+    "meaning": "앞",
+    "sound": "전",
+    "lesson": 11,
+    "group": 4
+  },
+  {
+    "id": 110,
+    "hanja": "正",
+    "meaning": "바를",
+    "sound": "정",
+    "lesson": 11,
+    "group": 4
+  },
+  {
+    "id": 111,
+    "hanja": "弟",
+    "meaning": "아우",
+    "sound": "제",
+    "lesson": 12,
+    "group": 4
+  },
+  {
+    "id": 112,
+    "hanja": "祖",
+    "meaning": "할아비",
+    "sound": "조",
+    "lesson": 12,
+    "group": 4
+  },
+  {
+    "id": 113,
+    "hanja": "足",
+    "meaning": "발",
+    "sound": "족",
+    "lesson": 12,
+    "group": 4
+  },
+  {
+    "id": 114,
+    "hanja": "左",
+    "meaning": "왼",
+    "sound": "좌",
+    "lesson": 12,
+    "group": 4
+  },
+  {
+    "id": 115,
+    "hanja": "主",
+    "meaning": "주인",
+    "sound": "주",
+    "lesson": 12,
+    "group": 4
+  },
+  {
+    "id": 116,
+    "hanja": "住",
+    "meaning": "살",
+    "sound": "주",
+    "lesson": 12,
+    "group": 4
+  },
+  {
+    "id": 117,
+    "hanja": "中",
+    "meaning": "가운데",
+    "sound": "중",
+    "lesson": 12,
+    "group": 4
+  },
+  {
+    "id": 118,
+    "hanja": "重",
+    "meaning": "무거울",
+    "sound": "중",
+    "lesson": 12,
+    "group": 4
+  },
+  {
+    "id": 119,
+    "hanja": "紙",
+    "meaning": "종이",
+    "sound": "지",
+    "lesson": 12,
+    "group": 4
+  },
+  {
+    "id": 120,
+    "hanja": "地",
+    "meaning": "땅",
+    "sound": "지",
+    "lesson": 12,
+    "group": 4
+  },
+  {
+    "id": 121,
+    "hanja": "直",
+    "meaning": "곧을",
+    "sound": "직",
+    "lesson": 13,
+    "group": 5
+  },
+  {
+    "id": 122,
+    "hanja": "川",
+    "meaning": "내",
+    "sound": "천",
+    "lesson": 13,
+    "group": 5
+  },
+  {
+    "id": 123,
+    "hanja": "千",
+    "meaning": "일천",
+    "sound": "천",
+    "lesson": 13,
+    "group": 5
+  },
+  {
+    "id": 124,
+    "hanja": "天",
+    "meaning": "하늘",
+    "sound": "천",
+    "lesson": 13,
+    "group": 5
+  },
+  {
+    "id": 125,
+    "hanja": "靑",
+    "meaning": "푸를",
+    "sound": "청",
+    "lesson": 13,
+    "group": 5
+  },
+  {
+    "id": 126,
+    "hanja": "草",
+    "meaning": "풀",
+    "sound": "초",
+    "lesson": 13,
+    "group": 5
+  },
+  {
+    "id": 127,
+    "hanja": "寸",
+    "meaning": "마디",
+    "sound": "촌",
+    "lesson": 13,
+    "group": 5
+  },
+  {
+    "id": 128,
+    "hanja": "村",
+    "meaning": "마을",
+    "sound": "촌",
+    "lesson": 13,
+    "group": 5
+  },
+  {
+    "id": 129,
+    "hanja": "秋",
+    "meaning": "가을",
+    "sound": "추",
+    "lesson": 13,
+    "group": 5
+  },
+  {
+    "id": 130,
+    "hanja": "春",
+    "meaning": "봄",
+    "sound": "춘",
+    "lesson": 13,
+    "group": 5
+  },
+  {
+    "id": 131,
+    "hanja": "出",
+    "meaning": "날",
+    "sound": "출",
+    "lesson": 14,
+    "group": 5
+  },
+  {
+    "id": 132,
+    "hanja": "七",
+    "meaning": "일곱",
+    "sound": "칠",
+    "lesson": 14,
+    "group": 5
+  },
+  {
+    "id": 133,
+    "hanja": "土",
+    "meaning": "흙",
+    "sound": "토",
+    "lesson": 14,
+    "group": 5
+  },
+  {
+    "id": 134,
+    "hanja": "八",
+    "meaning": "여덟",
+    "sound": "팔",
+    "lesson": 14,
+    "group": 5
+  },
+  {
+    "id": 135,
+    "hanja": "便",
+    "meaning": "편할",
+    "sound": "편",
+    "lesson": 14,
+    "group": 5
+  },
+  {
+    "id": 136,
+    "hanja": "平",
+    "meaning": "평평할",
+    "sound": "평",
+    "lesson": 14,
+    "group": 5
+  },
+  {
+    "id": 137,
+    "hanja": "下",
+    "meaning": "아래",
+    "sound": "하",
+    "lesson": 14,
+    "group": 5
+  },
+  {
+    "id": 138,
+    "hanja": "夏",
+    "meaning": "여름",
+    "sound": "하",
+    "lesson": 14,
+    "group": 5
+  },
+  {
+    "id": 139,
+    "hanja": "學",
+    "meaning": "배울",
+    "sound": "학",
+    "lesson": 14,
+    "group": 5
+  },
+  {
+    "id": 140,
+    "hanja": "韓",
+    "meaning": "나라",
+    "sound": "한",
+    "lesson": 14,
+    "group": 5
+  },
+  {
+    "id": 141,
+    "hanja": "漢",
+    "meaning": "한나라",
+    "sound": "한",
+    "lesson": 15,
+    "group": 5
+  },
+  {
+    "id": 142,
+    "hanja": "海",
+    "meaning": "바다",
+    "sound": "해",
+    "lesson": 15,
+    "group": 5
+  },
+  {
+    "id": 143,
+    "hanja": "兄",
+    "meaning": "맏",
+    "sound": "형",
+    "lesson": 15,
+    "group": 5
+  },
+  {
+    "id": 144,
+    "hanja": "火",
+    "meaning": "불",
+    "sound": "화",
+    "lesson": 15,
+    "group": 5
+  },
+  {
+    "id": 145,
+    "hanja": "話",
+    "meaning": "말씀",
+    "sound": "화",
+    "lesson": 15,
+    "group": 5
+  },
+  {
+    "id": 146,
+    "hanja": "花",
+    "meaning": "꽃",
+    "sound": "화",
+    "lesson": 15,
+    "group": 5
+  },
+  {
+    "id": 147,
+    "hanja": "活",
+    "meaning": "살",
+    "sound": "활",
+    "lesson": 15,
+    "group": 5
+  },
+  {
+    "id": 148,
+    "hanja": "孝",
+    "meaning": "효도",
+    "sound": "효",
+    "lesson": 15,
+    "group": 5
+  },
+  {
+    "id": 149,
+    "hanja": "後",
+    "meaning": "뒤",
+    "sound": "후",
+    "lesson": 15,
+    "group": 5
+  },
+  {
+    "id": 150,
+    "hanja": "休",
+    "meaning": "쉴",
+    "sound": "휴",
+    "lesson": 15,
+    "group": 5
+  },
+  {
+    "id": 151,
+    "hanja": "各",
+    "meaning": "각각",
+    "sound": "각",
+    "lesson": 16,
+    "group": 6
+  },
+  {
+    "id": 152,
+    "hanja": "角",
+    "meaning": "뿔",
+    "sound": "각",
+    "lesson": 16,
+    "group": 6
+  },
+  {
+    "id": 153,
+    "hanja": "感",
+    "meaning": "느낄",
+    "sound": "감",
+    "lesson": 16,
+    "group": 6
+  },
+  {
+    "id": 154,
+    "hanja": "強",
+    "meaning": "강할",
+    "sound": "강",
+    "lesson": 16,
+    "group": 6
+  },
+  {
+    "id": 155,
+    "hanja": "開",
+    "meaning": "열",
+    "sound": "개",
+    "lesson": 16,
+    "group": 6
+  },
+  {
+    "id": 156,
+    "hanja": "京",
+    "meaning": "서울",
+    "sound": "경",
+    "lesson": 16,
+    "group": 6
+  },
+  {
+    "id": 157,
+    "hanja": "界",
+    "meaning": "지경",
+    "sound": "계",
+    "lesson": 16,
+    "group": 6
+  },
+  {
+    "id": 158,
+    "hanja": "計",
+    "meaning": "셀",
+    "sound": "계",
+    "lesson": 16,
+    "group": 6
+  },
+  {
+    "id": 159,
+    "hanja": "古",
+    "meaning": "옛",
+    "sound": "고",
+    "lesson": 16,
+    "group": 6
+  },
+  {
+    "id": 160,
+    "hanja": "苦",
+    "meaning": "쓸",
+    "sound": "고",
+    "lesson": 16,
+    "group": 6
+  },
+  {
+    "id": 161,
+    "hanja": "高",
+    "meaning": "높을",
+    "sound": "고",
+    "lesson": 17,
+    "group": 6
+  },
+  {
+    "id": 162,
+    "hanja": "功",
+    "meaning": "공",
+    "sound": "공",
+    "lesson": 17,
+    "group": 6
+  },
+  {
+    "id": 163,
+    "hanja": "公",
+    "meaning": "공평할",
+    "sound": "공",
+    "lesson": 17,
+    "group": 6
+  },
+  {
+    "id": 164,
+    "hanja": "共",
+    "meaning": "함께",
+    "sound": "공",
+    "lesson": 17,
+    "group": 6
+  },
+  {
+    "id": 165,
+    "hanja": "果",
+    "meaning": "실과",
+    "sound": "과",
+    "lesson": 17,
+    "group": 6
+  },
+  {
+    "id": 166,
+    "hanja": "科",
+    "meaning": "과목",
+    "sound": "과",
+    "lesson": 17,
+    "group": 6
+  },
+  {
+    "id": 167,
+    "hanja": "光",
+    "meaning": "빛",
+    "sound": "광",
+    "lesson": 17,
+    "group": 6
+  },
+  {
+    "id": 168,
+    "hanja": "交",
+    "meaning": "사귈",
+    "sound": "교",
+    "lesson": 17,
+    "group": 6
+  },
+  {
+    "id": 169,
+    "hanja": "區",
+    "meaning": "구분할",
+    "sound": "구",
+    "lesson": 17,
+    "group": 6
+  },
+  {
+    "id": 170,
+    "hanja": "球",
+    "meaning": "공",
+    "sound": "구",
+    "lesson": 17,
+    "group": 6
+  },
+  {
+    "id": 171,
+    "hanja": "郡",
+    "meaning": "고을",
+    "sound": "군",
+    "lesson": 18,
+    "group": 6
+  },
+  {
+    "id": 172,
+    "hanja": "近",
+    "meaning": "가까울",
+    "sound": "근",
+    "lesson": 18,
+    "group": 6
+  },
+  {
+    "id": 173,
+    "hanja": "根",
+    "meaning": "뿌리",
+    "sound": "근",
+    "lesson": 18,
+    "group": 6
+  },
+  {
+    "id": 174,
+    "hanja": "今",
+    "meaning": "이제",
+    "sound": "금",
+    "lesson": 18,
+    "group": 6
+  },
+  {
+    "id": 175,
+    "hanja": "急",
+    "meaning": "급할",
+    "sound": "급",
+    "lesson": 18,
+    "group": 6
+  },
+  {
+    "id": 176,
+    "hanja": "級",
+    "meaning": "등급",
+    "sound": "급",
+    "lesson": 18,
+    "group": 6
+  },
+  {
+    "id": 177,
+    "hanja": "多",
+    "meaning": "많을",
+    "sound": "다",
+    "lesson": 18,
+    "group": 6
+  },
+  {
+    "id": 178,
+    "hanja": "短",
+    "meaning": "짧을",
+    "sound": "단",
+    "lesson": 18,
+    "group": 6
+  },
+  {
+    "id": 179,
+    "hanja": "堂",
+    "meaning": "집",
+    "sound": "당",
+    "lesson": 18,
+    "group": 6
+  },
+  {
+    "id": 180,
+    "hanja": "代",
+    "meaning": "대신할",
+    "sound": "대",
+    "lesson": 18,
+    "group": 6
+  },
+  {
+    "id": 181,
+    "hanja": "待",
+    "meaning": "기다릴",
+    "sound": "대",
+    "lesson": 19,
+    "group": 7
+  },
+  {
+    "id": 182,
+    "hanja": "對",
+    "meaning": "대할",
+    "sound": "대",
+    "lesson": 19,
+    "group": 7
+  },
+  {
+    "id": 183,
+    "hanja": "度",
+    "meaning": "법도",
+    "sound": "도",
+    "lesson": 19,
+    "group": 7
+  },
+  {
+    "id": 184,
+    "hanja": "圖",
+    "meaning": "그림",
+    "sound": "도",
+    "lesson": 19,
+    "group": 7
+  },
+  {
+    "id": 185,
+    "hanja": "讀",
+    "meaning": "읽을",
+    "sound": "독",
+    "lesson": 19,
+    "group": 7
+  },
+  {
+    "id": 186,
+    "hanja": "童",
+    "meaning": "아이",
+    "sound": "동",
+    "lesson": 19,
+    "group": 7
+  },
+  {
+    "id": 187,
+    "hanja": "頭",
+    "meaning": "머리",
+    "sound": "두",
+    "lesson": 19,
+    "group": 7
+  },
+  {
+    "id": 188,
+    "hanja": "等",
+    "meaning": "무리",
+    "sound": "등",
+    "lesson": 19,
+    "group": 7
+  },
+  {
+    "id": 189,
+    "hanja": "樂",
+    "meaning": "즐길",
+    "sound": "락",
+    "lesson": 19,
+    "group": 7
+  },
+  {
+    "id": 190,
+    "hanja": "例",
+    "meaning": "법식",
+    "sound": "례",
+    "lesson": 19,
+    "group": 7
+  },
+  {
+    "id": 191,
+    "hanja": "禮",
+    "meaning": "예도",
+    "sound": "례",
+    "lesson": 20,
+    "group": 7
+  },
+  {
+    "id": 192,
+    "hanja": "路",
+    "meaning": "길",
+    "sound": "로",
+    "lesson": 20,
+    "group": 7
+  },
+  {
+    "id": 193,
+    "hanja": "綠",
+    "meaning": "푸를",
+    "sound": "록",
+    "lesson": 20,
+    "group": 7
+  },
+  {
+    "id": 194,
+    "hanja": "利",
+    "meaning": "이로울",
+    "sound": "리",
+    "lesson": 20,
+    "group": 7
+  },
+  {
+    "id": 195,
+    "hanja": "李",
+    "meaning": "오얏",
+    "sound": "리",
+    "lesson": 20,
+    "group": 7
+  },
+  {
+    "id": 196,
+    "hanja": "理",
+    "meaning": "다스릴",
+    "sound": "리",
+    "lesson": 20,
+    "group": 7
+  },
+  {
+    "id": 197,
+    "hanja": "明",
+    "meaning": "밝을",
+    "sound": "명",
+    "lesson": 20,
+    "group": 7
+  },
+  {
+    "id": 198,
+    "hanja": "目",
+    "meaning": "눈",
+    "sound": "목",
+    "lesson": 20,
+    "group": 7
+  },
+  {
+    "id": 199,
+    "hanja": "聞",
+    "meaning": "들을",
+    "sound": "문",
+    "lesson": 20,
+    "group": 7
+  },
+  {
+    "id": 200,
+    "hanja": "米",
+    "meaning": "쌀",
+    "sound": "미",
+    "lesson": 20,
+    "group": 7
+  },
+  {
+    "id": 201,
+    "hanja": "美",
+    "meaning": "아름다울",
+    "sound": "미",
+    "lesson": 21,
+    "group": 7
+  },
+  {
+    "id": 202,
+    "hanja": "朴",
+    "meaning": "성",
+    "sound": "박",
+    "lesson": 21,
+    "group": 7
+  },
+  {
+    "id": 203,
+    "hanja": "反",
+    "meaning": "돌이킬",
+    "sound": "반",
+    "lesson": 21,
+    "group": 7
+  },
+  {
+    "id": 204,
+    "hanja": "半",
+    "meaning": "반",
+    "sound": "반",
+    "lesson": 21,
+    "group": 7
+  },
+  {
+    "id": 205,
+    "hanja": "班",
+    "meaning": "나눌",
+    "sound": "반",
+    "lesson": 21,
+    "group": 7
+  },
+  {
+    "id": 206,
+    "hanja": "發",
+    "meaning": "필",
+    "sound": "발",
+    "lesson": 21,
+    "group": 7
+  },
+  {
+    "id": 207,
+    "hanja": "放",
+    "meaning": "놓을",
+    "sound": "방",
+    "lesson": 21,
+    "group": 7
+  },
+  {
+    "id": 208,
+    "hanja": "番",
+    "meaning": "차례",
+    "sound": "번",
+    "lesson": 21,
+    "group": 7
+  },
+  {
+    "id": 209,
+    "hanja": "別",
+    "meaning": "다를",
+    "sound": "별",
+    "lesson": 21,
+    "group": 7
+  },
+  {
+    "id": 210,
+    "hanja": "病",
+    "meaning": "병",
+    "sound": "병",
+    "lesson": 21,
+    "group": 7
+  },
+  {
+    "id": 211,
+    "hanja": "服",
+    "meaning": "옷",
+    "sound": "복",
+    "lesson": 22,
+    "group": 8
+  },
+  {
+    "id": 212,
+    "hanja": "本",
+    "meaning": "근본",
+    "sound": "본",
+    "lesson": 22,
+    "group": 8
+  },
+  {
+    "id": 213,
+    "hanja": "部",
+    "meaning": "떼",
+    "sound": "부",
+    "lesson": 22,
+    "group": 8
+  },
+  {
+    "id": 214,
+    "hanja": "分",
+    "meaning": "나눌",
+    "sound": "분",
+    "lesson": 22,
+    "group": 8
+  },
+  {
+    "id": 215,
+    "hanja": "使",
+    "meaning": "하여금",
+    "sound": "사",
+    "lesson": 22,
+    "group": 8
+  },
+  {
+    "id": 216,
+    "hanja": "死",
+    "meaning": "죽을",
+    "sound": "사",
+    "lesson": 22,
+    "group": 8
+  },
+  {
+    "id": 217,
+    "hanja": "社",
+    "meaning": "모일",
+    "sound": "사",
+    "lesson": 22,
+    "group": 8
+  },
+  {
+    "id": 218,
+    "hanja": "書",
+    "meaning": "글",
+    "sound": "서",
+    "lesson": 22,
+    "group": 8
+  },
+  {
+    "id": 219,
+    "hanja": "石",
+    "meaning": "돌",
+    "sound": "석",
+    "lesson": 22,
+    "group": 8
+  },
+  {
+    "id": 220,
+    "hanja": "席",
+    "meaning": "자리",
+    "sound": "석",
+    "lesson": 22,
+    "group": 8
+  },
+  {
+    "id": 221,
+    "hanja": "線",
+    "meaning": "줄",
+    "sound": "선",
+    "lesson": 23,
+    "group": 8
+  },
+  {
+    "id": 222,
+    "hanja": "雪",
+    "meaning": "눈",
+    "sound": "설",
+    "lesson": 23,
+    "group": 8
+  },
+  {
+    "id": 223,
+    "hanja": "成",
+    "meaning": "이룰",
+    "sound": "성",
+    "lesson": 23,
+    "group": 8
+  },
+  {
+    "id": 224,
+    "hanja": "省",
+    "meaning": "살필",
+    "sound": "성",
+    "lesson": 23,
+    "group": 8
+  },
+  {
+    "id": 225,
+    "hanja": "消",
+    "meaning": "사라질",
+    "sound": "소",
+    "lesson": 23,
+    "group": 8
+  },
+  {
+    "id": 226,
+    "hanja": "速",
+    "meaning": "빠를",
+    "sound": "속",
+    "lesson": 23,
+    "group": 8
+  },
+  {
+    "id": 227,
+    "hanja": "孫",
+    "meaning": "손자",
+    "sound": "손",
+    "lesson": 23,
+    "group": 8
+  },
+  {
+    "id": 228,
+    "hanja": "樹",
+    "meaning": "나무",
+    "sound": "수",
+    "lesson": 23,
+    "group": 8
+  },
+  {
+    "id": 229,
+    "hanja": "術",
+    "meaning": "재주",
+    "sound": "술",
+    "lesson": 23,
+    "group": 8
+  },
+  {
+    "id": 230,
+    "hanja": "習",
+    "meaning": "익힐",
+    "sound": "습",
+    "lesson": 23,
+    "group": 8
+  },
+  {
+    "id": 231,
+    "hanja": "勝",
+    "meaning": "이길",
+    "sound": "승",
+    "lesson": 24,
+    "group": 8
+  },
+  {
+    "id": 232,
+    "hanja": "始",
+    "meaning": "처음",
+    "sound": "시",
+    "lesson": 24,
+    "group": 8
+  },
+  {
+    "id": 233,
+    "hanja": "式",
+    "meaning": "법",
+    "sound": "식",
+    "lesson": 24,
+    "group": 8
+  },
+  {
+    "id": 234,
+    "hanja": "身",
+    "meaning": "몸",
+    "sound": "신",
+    "lesson": 24,
+    "group": 8
+  },
+  {
+    "id": 235,
+    "hanja": "信",
+    "meaning": "믿을",
+    "sound": "신",
+    "lesson": 24,
+    "group": 8
+  },
+  {
+    "id": 236,
+    "hanja": "神",
+    "meaning": "귀신",
+    "sound": "신",
+    "lesson": 24,
+    "group": 8
+  },
+  {
+    "id": 237,
+    "hanja": "新",
+    "meaning": "새",
+    "sound": "신",
+    "lesson": 24,
+    "group": 8
+  },
+  {
+    "id": 238,
+    "hanja": "失",
+    "meaning": "잃을",
+    "sound": "실",
+    "lesson": 24,
+    "group": 8
+  },
+  {
+    "id": 239,
+    "hanja": "愛",
+    "meaning": "사랑",
+    "sound": "애",
+    "lesson": 24,
+    "group": 8
+  },
+  {
+    "id": 240,
+    "hanja": "夜",
+    "meaning": "밤",
+    "sound": "야",
+    "lesson": 24,
+    "group": 8
+  },
+  {
+    "id": 241,
+    "hanja": "野",
+    "meaning": "들",
+    "sound": "야",
+    "lesson": 25,
+    "group": 9
+  },
+  {
+    "id": 242,
+    "hanja": "弱",
+    "meaning": "약할",
+    "sound": "약",
+    "lesson": 25,
+    "group": 9
+  },
+  {
+    "id": 243,
+    "hanja": "藥",
+    "meaning": "약",
+    "sound": "약",
+    "lesson": 25,
+    "group": 9
+  },
+  {
+    "id": 244,
+    "hanja": "洋",
+    "meaning": "큰바다",
+    "sound": "양",
+    "lesson": 25,
+    "group": 9
+  },
+  {
+    "id": 245,
+    "hanja": "陽",
+    "meaning": "볕",
+    "sound": "양",
+    "lesson": 25,
+    "group": 9
+  },
+  {
+    "id": 246,
+    "hanja": "言",
+    "meaning": "말씀",
+    "sound": "언",
+    "lesson": 25,
+    "group": 9
+  },
+  {
+    "id": 247,
+    "hanja": "業",
+    "meaning": "일",
+    "sound": "업",
+    "lesson": 25,
+    "group": 9
+  },
+  {
+    "id": 248,
+    "hanja": "永",
+    "meaning": "길",
+    "sound": "영",
+    "lesson": 25,
+    "group": 9
+  },
+  {
+    "id": 249,
+    "hanja": "英",
+    "meaning": "꽃부리",
+    "sound": "영",
+    "lesson": 25,
+    "group": 9
+  },
+  {
+    "id": 250,
+    "hanja": "溫",
+    "meaning": "따뜻할",
+    "sound": "온",
+    "lesson": 25,
+    "group": 9
+  },
+  {
+    "id": 251,
+    "hanja": "用",
+    "meaning": "쓸",
+    "sound": "용",
+    "lesson": 26,
+    "group": 9
+  },
+  {
+    "id": 252,
+    "hanja": "勇",
+    "meaning": "날랠",
+    "sound": "용",
+    "lesson": 26,
+    "group": 9
+  },
+  {
+    "id": 253,
+    "hanja": "運",
+    "meaning": "옮길",
+    "sound": "운",
+    "lesson": 26,
+    "group": 9
+  },
+  {
+    "id": 254,
+    "hanja": "園",
+    "meaning": "동산",
+    "sound": "원",
+    "lesson": 26,
+    "group": 9
+  },
+  {
+    "id": 255,
+    "hanja": "遠",
+    "meaning": "멀",
+    "sound": "원",
+    "lesson": 26,
+    "group": 9
+  },
+  {
+    "id": 256,
+    "hanja": "由",
+    "meaning": "말미암을",
+    "sound": "유",
+    "lesson": 26,
+    "group": 9
+  },
+  {
+    "id": 257,
+    "hanja": "油",
+    "meaning": "기름",
+    "sound": "유",
+    "lesson": 26,
+    "group": 9
+  },
+  {
+    "id": 258,
+    "hanja": "銀",
+    "meaning": "은",
+    "sound": "은",
+    "lesson": 26,
+    "group": 9
+  },
+  {
+    "id": 259,
+    "hanja": "音",
+    "meaning": "소리",
+    "sound": "음",
+    "lesson": 26,
+    "group": 9
+  },
+  {
+    "id": 260,
+    "hanja": "飮",
+    "meaning": "마실",
+    "sound": "음",
+    "lesson": 26,
+    "group": 9
+  },
+  {
+    "id": 261,
+    "hanja": "衣",
+    "meaning": "옷",
+    "sound": "의",
+    "lesson": 27,
+    "group": 9
+  },
+  {
+    "id": 262,
+    "hanja": "意",
+    "meaning": "뜻",
+    "sound": "의",
+    "lesson": 27,
+    "group": 9
+  },
+  {
+    "id": 263,
+    "hanja": "醫",
+    "meaning": "의원",
+    "sound": "의",
+    "lesson": 27,
+    "group": 9
+  },
+  {
+    "id": 264,
+    "hanja": "者",
+    "meaning": "사람",
+    "sound": "자",
+    "lesson": 27,
+    "group": 9
+  },
+  {
+    "id": 265,
+    "hanja": "作",
+    "meaning": "지을",
+    "sound": "작",
+    "lesson": 27,
+    "group": 9
+  },
+  {
+    "id": 266,
+    "hanja": "昨",
+    "meaning": "어제",
+    "sound": "작",
+    "lesson": 27,
+    "group": 9
+  },
+  {
+    "id": 267,
+    "hanja": "章",
+    "meaning": "글",
+    "sound": "장",
+    "lesson": 27,
+    "group": 9
+  },
+  {
+    "id": 268,
+    "hanja": "才",
+    "meaning": "재주",
+    "sound": "재",
+    "lesson": 27,
+    "group": 9
+  },
+  {
+    "id": 269,
+    "hanja": "在",
+    "meaning": "있을",
+    "sound": "재",
+    "lesson": 27,
+    "group": 9
+  },
+  {
+    "id": 270,
+    "hanja": "戰",
+    "meaning": "싸움",
+    "sound": "전",
+    "lesson": 27,
+    "group": 9
+  },
+  {
+    "id": 271,
+    "hanja": "定",
+    "meaning": "정할",
+    "sound": "정",
+    "lesson": 28,
+    "group": 10
+  },
+  {
+    "id": 272,
+    "hanja": "庭",
+    "meaning": "뜰",
+    "sound": "정",
+    "lesson": 28,
+    "group": 10
+  },
+  {
+    "id": 273,
+    "hanja": "第",
+    "meaning": "차례",
+    "sound": "제",
+    "lesson": 28,
+    "group": 10
+  },
+  {
+    "id": 274,
+    "hanja": "題",
+    "meaning": "제목",
+    "sound": "제",
+    "lesson": 28,
+    "group": 10
+  },
+  {
+    "id": 275,
+    "hanja": "朝",
+    "meaning": "아침",
+    "sound": "조",
+    "lesson": 28,
+    "group": 10
+  },
+  {
+    "id": 276,
+    "hanja": "族",
+    "meaning": "겨레",
+    "sound": "족",
+    "lesson": 28,
+    "group": 10
+  },
+  {
+    "id": 277,
+    "hanja": "注",
+    "meaning": "물댈",
+    "sound": "주",
+    "lesson": 28,
+    "group": 10
+  },
+  {
+    "id": 278,
+    "hanja": "晝",
+    "meaning": "낮",
+    "sound": "주",
+    "lesson": 28,
+    "group": 10
+  },
+  {
+    "id": 279,
+    "hanja": "集",
+    "meaning": "모일",
+    "sound": "집",
+    "lesson": 28,
+    "group": 10
+  },
+  {
+    "id": 280,
+    "hanja": "窓",
+    "meaning": "창",
+    "sound": "창",
+    "lesson": 28,
+    "group": 10
+  },
+  {
+    "id": 281,
+    "hanja": "淸",
+    "meaning": "맑을",
+    "sound": "청",
+    "lesson": 29,
+    "group": 10
+  },
+  {
+    "id": 282,
+    "hanja": "體",
+    "meaning": "몸",
+    "sound": "체",
+    "lesson": 29,
+    "group": 10
+  },
+  {
+    "id": 283,
+    "hanja": "親",
+    "meaning": "친할",
+    "sound": "친",
+    "lesson": 29,
+    "group": 10
+  },
+  {
+    "id": 284,
+    "hanja": "太",
+    "meaning": "클",
+    "sound": "태",
+    "lesson": 29,
+    "group": 10
+  },
+  {
+    "id": 285,
+    "hanja": "通",
+    "meaning": "통할",
+    "sound": "통",
+    "lesson": 29,
+    "group": 10
+  },
+  {
+    "id": 286,
+    "hanja": "特",
+    "meaning": "특별할",
+    "sound": "특",
+    "lesson": 29,
+    "group": 10
+  },
+  {
+    "id": 287,
+    "hanja": "表",
+    "meaning": "겉",
+    "sound": "표",
+    "lesson": 29,
+    "group": 10
+  },
+  {
+    "id": 288,
+    "hanja": "風",
+    "meaning": "바람",
+    "sound": "풍",
+    "lesson": 29,
+    "group": 10
+  },
+  {
+    "id": 289,
+    "hanja": "合",
+    "meaning": "합할",
+    "sound": "합",
+    "lesson": 29,
+    "group": 10
+  },
+  {
+    "id": 290,
+    "hanja": "行",
+    "meaning": "다닐",
+    "sound": "행",
+    "lesson": 29,
+    "group": 10
+  },
+  {
+    "id": 291,
+    "hanja": "幸",
+    "meaning": "다행",
+    "sound": "행",
+    "lesson": 30,
+    "group": 10
+  },
+  {
+    "id": 292,
+    "hanja": "向",
+    "meaning": "향할",
+    "sound": "향",
+    "lesson": 30,
+    "group": 10
+  },
+  {
+    "id": 293,
+    "hanja": "現",
+    "meaning": "나타날",
+    "sound": "현",
+    "lesson": 30,
+    "group": 10
+  },
+  {
+    "id": 294,
+    "hanja": "形",
+    "meaning": "모양",
+    "sound": "형",
+    "lesson": 30,
+    "group": 10
+  },
+  {
+    "id": 295,
+    "hanja": "號",
+    "meaning": "이름",
+    "sound": "호",
+    "lesson": 30,
+    "group": 10
+  },
+  {
+    "id": 296,
+    "hanja": "和",
+    "meaning": "화할",
+    "sound": "화",
+    "lesson": 30,
+    "group": 10
+  },
+  {
+    "id": 297,
+    "hanja": "畫",
+    "meaning": "그림",
+    "sound": "화",
+    "lesson": 30,
+    "group": 10
+  },
+  {
+    "id": 298,
+    "hanja": "黃",
+    "meaning": "누를",
+    "sound": "황",
+    "lesson": 30,
+    "group": 10
+  },
+  {
+    "id": 299,
+    "hanja": "會",
+    "meaning": "모일",
+    "sound": "회",
+    "lesson": 30,
+    "group": 10
+  },
+  {
+    "id": 300,
+    "hanja": "訓",
+    "meaning": "가르칠",
+    "sound": "훈",
+    "lesson": 30,
+    "group": 10
+  }
+]
+</script>
+<script>/* Offline quiz and progress helpers. No dependencies or network access. */
+const HanjaEngine = (() => {
+  'use strict';
+
+  const MODES = new Set(['mixed', 'reading', 'reverse']);
+  const MAX_HISTORY = 200;
+  const validId = id => Number.isInteger(id) && id >= 1 && id <= 300;
+  const integer = (value, fallback, min, max) => {
+    if (typeof value !== 'number' || !Number.isFinite(value)) return fallback;
+    return Math.max(min, Math.min(max, Math.floor(value)));
+  };
+  const label = item => `${item.meaning} ${item.sound}`;
+
+  function shuffle(array, rng = Math.random) {
+    const copy = [...array];
+    for (let i = copy.length - 1; i > 0; i--) {
+      const random = Number(rng());
+      const safe = Number.isFinite(random) ? Math.max(0, Math.min(0.9999999999999999, random)) : 0;
+      const j = Math.floor(safe * (i + 1));
+      [copy[i], copy[j]] = [copy[j], copy[i]];
+    }
+    return copy;
+  }
+
+  function uniqueItems(items) {
+    const seen = new Set();
+    return (Array.isArray(items) ? items : []).filter(item => {
+      if (!item || !validId(item.id) || seen.has(item.id) ||
+          typeof item.hanja !== 'string' || !item.hanja ||
+          typeof item.meaning !== 'string' || !item.meaning ||
+          typeof item.sound !== 'string' || !item.sound) return false;
+      seen.add(item.id);
+      return true;
+    });
+  }
+
+  function buildQuiz(items, options = {}, allItems = items) {
+    const candidates = uniqueItems(items);
+    const mode = MODES.has(options.mode) ? options.mode : 'mixed';
+    const count = integer(options.count, 30, 1, 300);
+    const selected = shuffle(candidates).slice(0, count);
+    const universe = uniqueItems([...candidates, ...(Array.isArray(allItems) ? allItems : [])]);
+
+    return selected.map((item, index) => {
+      // Alternation keeps a mixed quiz balanced even when only a few questions are selected.
+      const kind = mode === 'mixed' ? (index % 2 === 0 ? 'reading' : 'reverse') : mode;
+      const answer = kind === 'reading' ? label(item) : item.hanja;
+      const distractors = [];
+      const seen = new Set([answer]);
+      const append = candidate => {
+        // A matching reading would also be a valid answer to a reverse question.
+        if (kind === 'reverse' && label(candidate) === label(item)) return;
+        const value = kind === 'reading' ? label(candidate) : candidate.hanja;
+        if (!seen.has(value)) {
+          seen.add(value);
+          distractors.push(value);
+        }
+      };
+      shuffle(candidates).forEach(append);
+      if (distractors.length < 3) shuffle(universe).forEach(append);
+      if (distractors.length < 3) {
+        throw new Error('퀴즈를 만들려면 서로 다른 보기 4개를 만들 수 있는 한자 목록이 필요해요.');
+      }
+      return {
+        item,
+        kind,
+        prompt: kind === 'reading' ? item.hanja : label(item),
+        answer,
+        options: shuffle([answer, ...distractors.slice(0, 3)])
+      };
+    });
+  }
+
+  function initialState() {
+    return {version: 1, known: [], wrong: [], results: [], lastGroup: 1};
+  }
+
+  function normalizeResult(raw) {
+    if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return null;
+    if (!Number.isInteger(raw.group) || raw.group < 1 || raw.group > 10) return null;
+    if (typeof raw.total !== 'number' || !Number.isFinite(raw.total) || raw.total < 1) return null;
+    if (typeof raw.score !== 'number' || !Number.isFinite(raw.score)) return null;
+    const total = integer(raw.total, 1, 1, 300);
+    const score = integer(raw.score, 0, 0, total);
+    if (typeof raw.date !== 'string' || !raw.date.trim()) return null;
+    const date = new Date(raw.date);
+    if (!Number.isFinite(date.getTime())) return null;
+    return {
+      group: raw.group,
+      score,
+      total,
+      mode: MODES.has(raw.mode) ? raw.mode : 'mixed',
+      date: date.toISOString(),
+      review: raw.review === true
+    };
+  }
+
+  function sanitizeState(raw, allItems) {
+    const state = initialState();
+    if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return state;
+    const validIds = new Set(uniqueItems(allItems).map(item => item.id));
+    const cleanIds = value => Array.isArray(value)
+      ? [...new Set(value.filter(id => validIds.has(id)))]
+      : [];
+    state.wrong = cleanIds(raw.wrong);
+    const wrong = new Set(state.wrong);
+    state.known = cleanIds(raw.known).filter(id => !wrong.has(id));
+    state.lastGroup = integer(raw.lastGroup, 1, 1, 10);
+    state.results = Array.isArray(raw.results)
+      ? raw.results.map(normalizeResult).filter(Boolean).slice(-MAX_HISTORY)
+      : [];
+    return state;
+  }
+
+  function recordAnswer(state, itemId, correct) {
+    if (!validId(itemId)) return state;
+    state.known = Array.isArray(state.known) ? state.known : [];
+    state.wrong = Array.isArray(state.wrong) ? state.wrong : [];
+    if (correct === true) {
+      state.wrong = state.wrong.filter(id => id !== itemId);
+      if (!state.known.includes(itemId)) state.known.push(itemId);
+    } else {
+      state.known = state.known.filter(id => id !== itemId);
+      if (!state.wrong.includes(itemId)) state.wrong.push(itemId);
+    }
+    return state;
+  }
+
+  function recordResult(state, result) {
+    const normalized = normalizeResult({...result, date: result?.date ?? new Date().toISOString()});
+    if (!normalized) return state;
+    if (!Array.isArray(state.results)) state.results = [];
+    state.results.push(normalized);
+    state.results = state.results.slice(-MAX_HISTORY);
+    if (!normalized.review) state.lastGroup = normalized.group;
+    return state;
+  }
+
+  function summarize(state, items) {
+    const source = uniqueItems(items);
+    const ids = new Set(source.map(item => item.id));
+    const known = [...new Set(state.known || [])].filter(id => ids.has(id)).length;
+    const wrong = [...new Set(state.wrong || [])].filter(id => ids.has(id)).length;
+    const results = (state.results || []).filter(result => !result.review);
+    const best = {};
+    results.forEach(result => {
+      const rate = result.total ? result.score / result.total : 0;
+      if (!best[result.group] || rate > best[result.group].rate) {
+        best[result.group] = {...result, rate};
+      }
+    });
+    return {known, wrong, total: source.length, best, attempts: (state.results || []).length};
+  }
+
+  return Object.freeze({shuffle, buildQuiz, initialState, sanitizeState, recordAnswer, recordResult, summarize});
+})();
+</script>
+<script>'use strict';
+const DATA = JSON.parse(document.getElementById('hanja-data').textContent);
+const E = HanjaEngine;
+const STORAGE_KEY = 'hanja-hangeoreum-v1';
+const $ = selector => document.querySelector(selector);
+const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const groupItems = group => DATA.filter(item => item.group === Number(group));
+const groupRange = group => `${String(group * 3 - 2).padStart(2,'0')}–${String(group * 3).padStart(2,'0')}회`;
+const modeLabel = mode => ({mixed:'골고루 퀴즈',reading:'뜻·음 읽기 퀴즈',reverse:'한자 맞히기'}[mode] || '뜻·음 읽기 퀴즈');
+let state, page = 'home', storageAvailable = true, storageMessage = '', session = null, toastTimer, dictionaryFilter = 'all';
+let searchTerm = '', groupFilter = 'all';
+try {
+  const saved = localStorage.getItem(STORAGE_KEY);
+  state = E.sanitizeState(saved ? JSON.parse(saved) : null, DATA);
+  const checkKey = STORAGE_KEY + '-check';
+  localStorage.setItem(checkKey,'1'); localStorage.removeItem(checkKey);
+} catch(error) {
+  state = state || E.initialState();
+  try { localStorage.setItem(STORAGE_KEY + '-check','1'); localStorage.removeItem(STORAGE_KEY + '-check'); storageMessage = '저장된 기록을 읽지 못해 새로 시작했어요. 백업 파일이 있으면 복원해 주세요.'; }
+  catch { storageAvailable = false; storageMessage = '이 브라우저에서는 자동 저장이 제한돼요. 창을 닫기 전에 학습 기록을 백업해 주세요.'; }
+}
+function save() {
+  try { localStorage.setItem(STORAGE_KEY,JSON.stringify(state)); storageAvailable = true; }
+  catch { storageAvailable = false; storageMessage = '자동 저장이 제한돼요. 창을 닫기 전에 기록 백업을 눌러 주세요.'; }
+  $('#storage-status').textContent = storageAvailable ? '이 브라우저에 저장돼요' : '기록을 백업해 주세요';
+}
+function toast(message) {
+  $('#toast').textContent = message;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { $('#toast').textContent = ''; },3800);
+}
+function icon(name,size=22) {
+  const paths = {
+    book:'<path d="M3 4h6a3 3 0 0 1 3 3v14a4 4 0 0 0-4-3H3zM21 4h-6a3 3 0 0 0-3 3v14a4 4 0 0 1 4-3h5z"/>',
+    layers:'<path d="m12 3 10 6-10 6L2 9zM2 13l10 6 10-6M2 17l10 6 10-6"/>',
+    leaf:'<path d="M20 3C10 2 3 6 4 14c1 8 14 8 16-11ZM6 19l10-11M9 15v-4M12 12h4"/>',
+    arrow:'<path d="M5 12h14m-6-6 6 6-6 6"/>',
+    check:'<path d="m5 12 4 4L19 6"/>',
+    star:'<path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9z"/>',
+    rotate:'<path d="M3 10a9 9 0 1 1 2 9M3 4v6h6"/>',
+    close:'<path d="m6 6 12 12M18 6 6 18"/>',
+    shield:'<path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6zM8 12l3 3 5-6"/>'
+  };
+  return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] || paths.book}</svg>`;
+}
+const heroArt = `<svg viewBox="0 0 380 305" aria-hidden="true"><ellipse cx="195" cy="272" rx="143" ry="15" fill="#dce4d3"/><circle cx="207" cy="137" r="121" fill="#e2ead8"/><g transform="translate(238 54) rotate(13)"><rect width="103" height="153" rx="10" fill="#c9d7bb"/><rect x="5" y="-5" width="103" height="153" rx="10" fill="#f8f5e9" stroke="#d1d9c5"/><text x="56" y="75" text-anchor="middle" font-family="Batang,serif" font-size="58" fill="#6f8260">山</text><text x="56" y="112" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8f9c80">메 산</text></g><g transform="translate(52 69) rotate(-13)"><rect width="104" height="149" rx="10" fill="#d2d7bb"/><rect x="-3" y="-5" width="104" height="149" rx="10" fill="#faf4df" stroke="#e0d8bd"/><text x="50" y="77" text-anchor="middle" font-family="Batang,serif" font-size="58" fill="#a2996a">木</text><text x="50" y="111" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#a49b78">나무 목</text></g><g transform="translate(128 45) rotate(4)"><rect x="3" y="7" width="141" height="204" rx="12" fill="#a6b698" opacity=".3"/><rect width="141" height="204" rx="12" fill="#fffef7" stroke="#cdd8c0"/><path d="M16 23h108M16 160h108" stroke="#e4e9d9"/><text x="70" y="45" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#a6af96">오늘의 한자</text><text x="70" y="125" text-anchor="middle" font-family="Batang,serif" font-size="82" fill="#34543b">家</text><text x="70" y="183" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#59704c">집 가</text></g><g transform="translate(298 215)"><path d="M12 43V7" stroke="#69865b" stroke-width="3"/><path d="M12 27C-5 30-11 10-11 10S9 7 12 27" fill="#91a77f"/><path d="M12 17C32 22 38 1 38 1S17-2 12 17" fill="#6c8a5c"/><path d="M-3 43h32l-5 25H2z" fill="#d79a7b"/><path d="M-6 42h38v7H-6z" fill="#e3b296"/></g><g fill="#f1cb75"><path d="m81 24 3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/><path d="m327 114 2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/></g><circle cx="56" cy="229" r="4" fill="#b7c6a7"/><circle cx="312" cy="47" r="3" fill="#c8aa6a"/></svg>`;
+function notice() { return storageMessage ? `<div class="notice" role="status">${esc(storageMessage)} <button class="text-link" data-action="export">기록 백업</button></div>` : ''; }
+function render() {
+  const known = state.known.length, wrong = state.wrong.length;
+  $('#wrong-count').textContent = String(wrong); $('#wrong-count').hidden = !wrong;
+  document.querySelectorAll('.nav-button').forEach(button => {
+    button.classList.toggle('active',button.dataset.page === page);
+    if(button.dataset.page === page) button.setAttribute('aria-current','page'); else button.removeAttribute('aria-current');
+  });
+  $('#storage-status').textContent = storageAvailable ? '이 브라우저에 저장돼요' : '기록을 백업해 주세요';
+  const views = {home:renderHome,dictionary:renderDictionary,review:renderReview,history:renderHistory,help:renderHelp};
+  $('#main').innerHTML = `<div class="page-enter">${notice()}${(views[page] || renderHome)()}</div>`;
+}
+function navigate(next) { page = next; render(); window.scrollTo({top:0,behavior:'auto'}); $('#main').focus({preventScroll:true}); }
+function renderHome() {
+  const known = state.known.length;
+  const next = Array.from({length:10},(_,i)=>i+1).find(g => groupItems(g).some(x=>!state.known.includes(x.id))) || state.lastGroup;
+  return `<section class="hero"><div class="hero-copy"><div class="eyebrow">초등 한자 6급 &nbsp; · &nbsp; 3회씩 차근차근</div><h1>한자를 보고,<br><em>뜻과 음을 읽어요.</em></h1><p>먼저 소리 내어 읽고, 퀴즈로 확인해요.<br>3회씩 30자, 차근차근 300자를 읽어 봐요.</p><div class="hero-actions"><button class="primary" data-action="study" data-group="${next}">${groupRange(next)} 읽기 시작 ${icon('arrow',17)}</button><button class="text-link" data-action="scroll-groups">전체 학습 보기 ↓</button></div><div class="hero-footnote">${icon('shield',12)} 뜻·음 읽기 중심 · 별도 학습 계정 없이</div></div><div class="hero-art">${heroArt}</div></section>
+  <section class="stats-grid3" aria-label="학습 현황"><div class="stat-card"><span class="stat-icon">${icon('book')}</span><div><div class="stat-value">300<small>자</small></div><div class="stat-label">함께 배울 한자</div></div></div><div class="stat-card"><span class="stat-icon">${icon('layers')}</span><div><div class="stat-value">10<small>묶음</small></div><div class="stat-label">3회씩, 30자를 한 번에</div></div></div><div class="stat-card"><span class="stat-icon">${icon('leaf')}</span><div><div class="stat-value">${known}<small>자</small></div><div class="stat-label">내가 읽을 수 있는 한자</div></div></div></section>
+  <section id="groups"><div class="section-heading"><div><h2>차근차근, 한자 여정</h2><p>원하는 3회 묶음을 골라 뜻과 음을 읽어 봐요.</p></div><span class="muted">30회 학습지 · 총 10묶음</span></div><div class="journey-layout"><div class="group-grid">${Array.from({length:10},(_,i)=>groupCard(i+1,next)).join('')}</div><aside class="side-stack"><section class="side-card"><h3>이렇게 공부해요</h3><ol class="step-list"><li><span class="step-number">1</span><div class="step-copy"><strong>먼저 소리 내어 읽기</strong><p>한자를 보고 뜻과 음을<br>소리 내어 읽어 봐요.</p></div></li><li><span class="step-number">2</span><div class="step-copy"><strong>퀴즈로 확인하기</strong><p>뜻과 음을 읽은 뒤<br>알맞은 보기를 골라요.</p></div></li><li><span class="step-number">3</span><div class="step-copy"><strong>틀린 한자 다시 보기</strong><p>오답 노트로 한 번 더!<br>맞히면 오답에서 사라져요.</p></div></li></ol></section><section class="side-card"><h3>나의 배움 나무</h3><div class="progress-ring" style="--percent:${Math.round(known/3)}"><div><strong>${Math.round(known/3)}%</strong><small>300자 중 ${known}자</small></div></div><div class="mini-stats"><div><span>퀴즈 도전</span><strong>${state.results.length}<small>번</small></strong></div><div><span>다시 볼 한자</span><strong>${state.wrong.length}<small>자</small></strong></div></div></section><div class="note"><strong>서두르지 않아도 괜찮아요.</strong>모르는 한자는 다시 만나면 돼요.<br>어제보다 하나 더 알면, 그걸로 충분해요.</div></aside></div></section>`;
+}
+function groupCard(group,next) {
+  const items = groupItems(group), count = items.filter(item=>state.known.includes(item.id)).length;
+  const results = state.results.filter(x=>x.group===group&&!x.review), full = results.filter(x=>x.total===30);
+  const best = full.length ? Math.max(...full.map(x=>x.score)) : null;
+  const status = count===30?'읽기 완료':count || results.length?'학습 중':group===next?'여기서 시작':'시작 전';
+  return `<article class="group-card ${group===next?'current':''}"><div class="group-top"><span class="group-number">STEP ${String(group).padStart(2,'0')}</span><span class="group-status ${count===30?'completed':count||results.length?'started':''}">${status}</span></div><h3 class="group-range">${groupRange(group)}</h3><p class="group-name">${group}번째 걸음 · 한자 30자</p><div class="sample-characters" aria-label="포함된 한자 일부">${items.slice(0,6).map(x=>`<span>${x.hanja}</span>`).join('')}</div><div class="group-meta"><span>읽을 수 있는 한자 ${count} / 30</span><span>${best===null?'퀴즈로 실력 확인':`30문제 최고 ${best} / 30`}</span></div><div class="progress-track" role="progressbar" aria-label="${groupRange(group)} 익힌 한자" aria-valuenow="${count}" aria-valuemin="0" aria-valuemax="30"><i style="width:${count/30*100}%"></i></div><div class="group-actions"><button class="secondary" data-action="study" data-group="${group}">${icon('book',14)} 읽기 연습</button><button class="quiz-link" data-action="quiz-setup" data-group="${group}">읽기 퀴즈 ${icon('arrow',14)}</button></div></article>`;
+}
+function tile(item) { return `<button class="character-tile" data-action="character" data-id="${item.id}" aria-label="${item.hanja}, ${esc(item.meaning)} ${esc(item.sound)}, ${item.lesson}회${state.known.includes(item.id)?', 읽을 수 있는 한자':''}">${state.known.includes(item.id)?'<span class="known-dot" aria-hidden="true"></span>':''}<span class="tile-hanja">${item.hanja}</span><span class="tile-reading">${esc(item.meaning)} ${esc(item.sound)}</span><span class="tile-lesson">${item.lesson}회 · ${item.group}번째 묶음</span></button>`; }
+function filteredDictionary() {
+  const q = searchTerm.trim().toLowerCase();
+  return DATA.filter(x=>(groupFilter==='all'||x.group===Number(groupFilter)) && (dictionaryFilter!=='known'||state.known.includes(x.id)) && (dictionaryFilter!=='unknown'||!state.known.includes(x.id)) && (!q||`${x.hanja} ${x.meaning} ${x.sound} ${x.lesson}회`.includes(q)));
+}
+function dictionaryResults() {
+  const items = filteredDictionary();
+  return `<p class="muted small" style="margin-bottom:16px" role="status">${items.length}자의 한자 · 카드를 누르면 뜻과 음을 복습할 수 있어요.</p>${items.length?`<div class="dictionary-grid">${items.map(tile).join('')}</div>`:empty('찾는 한자가 없어요','다른 한자, 뜻 또는 음으로 검색해 보세요.')}`;
+}
+function renderDictionary() {
+  return `<div class="page-intro"><span class="eyebrow">내 손안의 한자 카드</span><h1 class="page-heading">한자 모아보기</h1><p class="muted">학습지에 있는 300자를 한눈에 살펴봐요.</p></div><div class="toolbar"><label class="search-field"><span class="sr-only">한자, 뜻, 음 검색</span><input id="hanja-search" type="search" placeholder="한자, 뜻, 음으로 검색해요. 예: 家, 집, 가" value="${esc(searchTerm)}" autocomplete="off"></label><label><span class="sr-only">학습 묶음</span><select id="group-filter"><option value="all">전체 10묶음</option>${Array.from({length:10},(_,i)=>`<option value="${i+1}" ${Number(groupFilter)===i+1?'selected':''}>${i+1}묶음 · ${groupRange(i+1)}</option>`).join('')}</select></label></div><div class="filter-tabs" role="group" aria-label="익힘 상태 필터">${[['all','전체 한자'],['known','읽을 수 있는 한자'],['unknown','아직 배울 한자']].map(([key,label])=>`<button class="filter-tab ${dictionaryFilter===key?'active':''}" aria-pressed="${dictionaryFilter===key}" data-action="dictionary-filter" data-filter="${key}">${label}</button>`).join('')}</div><div id="dictionary-results">${dictionaryResults()}</div>`;
+}
+function empty(title,text,action='') { return `<div class="empty-state">${icon('leaf',42)}<h2>${title}</h2><p>${text}</p>${action}</div>`; }
+function renderReview() {
+  const items=DATA.filter(x=>state.wrong.includes(x.id));
+  return `<div class="page-intro"><span class="eyebrow">다시 만나면 더 잘 기억나요</span><h1 class="page-heading">오답 노트</h1><p class="muted">퀴즈에서 틀린 한자를 모았어요. 다시 맞히면 이곳에서 사라져요.</p></div>${items.length?`<div class="review-banner"><div><h2>다시 볼 한자, ${items.length}자</h2><p>틀려도 괜찮아요. 오늘 한 번 더 만나 봐요.${items.length>30?' 퀴즈는 한 번에 최대 30자씩 나와요.':''}</p></div><div class="button-row" style="margin-top:0"><button class="secondary" data-action="study-review">카드로 익히기</button><button class="primary" data-action="review-quiz">오답 퀴즈 ${icon('arrow',16)}</button></div></div><div class="dictionary-grid">${items.map(tile).join('')}</div>`:empty('아직 오답이 없어요','퀴즈를 풀면 다시 공부할 한자가 여기에 모여요. 한 걸음 시작해 볼까요?','<button class="primary" data-action="nav" data-page="home">공부방으로 가기</button>')}`;
+}
+function renderHistory() {
+  const total = state.results.reduce((n,x)=>n+x.total,0), correct=state.results.reduce((n,x)=>n+x.score,0);
+  return `<div class="page-intro"><span class="eyebrow">배운 만큼 자라나요</span><h1 class="page-heading">나의 학습 기록</h1><p class="muted">완료한 퀴즈의 최근 200회 기록을 보여드려요.</p></div><div class="stats-grid3"><div class="stat-card"><span class="stat-icon">${icon('leaf')}</span><div><div class="stat-value">${state.known.length}<small>자</small></div><div class="stat-label">읽을 수 있는 한자 / 300자</div></div></div><div class="stat-card"><span class="stat-icon">${icon('star')}</span><div><div class="stat-value">${state.results.length}<small>번</small></div><div class="stat-label">퀴즈 도전</div></div></div><div class="stat-card"><span class="stat-icon">${icon('check')}</span><div><div class="stat-value">${total?Math.round(correct/total*100):0}<small>%</small></div><div class="stat-label">완료한 퀴즈의 정답률</div></div></div></div>${state.results.length?`<div class="section-heading"><h2>한 걸음의 기록</h2><span class="muted">최근 기록부터</span></div><div class="history-list">${[...state.results].reverse().map(x=>`<article class="history-item"><div><h3>${x.review?'오답 복습':`${x.group}묶음 · ${groupRange(x.group)}`}</h3><p>${modeLabel(x.mode)} · ${formatDate(x.date)}</p></div><div class="score-badge">${x.score}<small> / ${x.total}</small><span class="sr-only">문제 정답</span></div></article>`).join('')}</div>`:empty('첫 번째 기록을 기다리고 있어요','퀴즈를 끝까지 풀면 결과가 자동으로 기록돼요.','<button class="primary" data-action="nav" data-page="home">공부하러 가기</button>')}<section class="settings-panel"><h2>내 기록 안전하게 보관하기</h2><p>기록은 이 브라우저에만 저장돼요. 다른 기기로 옮기거나 브라우저 데이터를 지우기 전에는 백업해 주세요.<br>공용 기기에서는 앞 학생의 기록을 백업한 뒤 초기화해 새로 시작할 수 있어요.</p><div class="button-row"><button class="secondary" data-action="export">기록 백업</button><button class="secondary" data-action="import">백업 복원</button><button class="secondary danger" data-action="reset">학습 기록 초기화</button></div></section>`;
+}
+function formatDate(date) { try { return new Intl.DateTimeFormat('ko-KR',{year:'numeric',month:'long',day:'numeric',hour:'2-digit',minute:'2-digit',timeZone:'Asia/Seoul'}).format(new Date(date)); } catch{return '날짜 확인 불가';} }
+function renderHelp() { return `<div class="page-intro"><span class="eyebrow">처음이라면 여기부터</span><h1 class="page-heading">사용 안내</h1><p class="muted">웹주소를 열고, 한자의 뜻과 음을 읽어 보세요.</p></div><div class="help-grid"><section class="help-card"><h3>1. 한자를 보고 읽어요</h3><p>한자가 나오면 뜻과 음을 먼저 소리 내어 읽어 봐요. 家를 보면 ‘집 가’라고 읽는 거예요.</p><ol><li>공부방에서 원하는 묶음의 ‘읽기 연습’을 눌러요.</li><li>뜻과 음을 읽은 뒤 ‘뜻·음 확인’을 눌러 답을 확인해요.</li><li>스스로 읽을 수 있으면 ‘읽을 수 있어요’로 표시해요.</li><li>읽기 퀴즈를 풀고 틀린 한자를 다시 읽어요.</li></ol></section><section class="help-card"><h3>2. 3회씩, 30자씩 연습해요</h3><p>첨부된 30회 학습지를 3회씩 묶었어요. 한 묶음은 30자, 전체는 10묶음·300자예요. 읽기 연습에서는 회차별 10자씩 따로 볼 수도 있어요.</p><p>퀴즈에서도 한자만 먼저 나와요. 뜻과 음을 읽고 ‘읽었어요 · 보기 열기’를 누르면 네 개의 보기가 나와요. 가볍게 10문제 또는 묶음 전체 30문제를 선택해요. 음성을 녹음하거나 자동으로 채점하지 않으니, 먼저 읽고 보기로 확인해 주세요.</p></section><section class="help-card"><h3>3. 웹주소로 바로 열어요</h3><p>휴대폰·태블릿·PC에서 이 사이트 주소를 Chrome, Edge, Safari 등의 웹브라우저로 열어 주세요. 접속할 때는 인터넷 연결이 필요해요.</p><p>별도 학습 계정이나 유료 API를 사용하지 않아요. 이 사이트는 학습을 위해 마이크 권한이나 이름·이메일을 요청하지 않아요.</p></section><section class="help-card"><h3>4. 기록을 옮기고 보관해요</h3><p>읽기 표시·오답·퀴즈 기록은 현재 브라우저에만 저장돼요. 다른 기기·브라우저나 내려받아 사용하던 HTML 버전의 기록은 자동으로 옮겨지지 않아요. 같은 브라우저를 함께 쓰면 학습 기록도 함께 사용해요.</p><p>‘학습 기록 → 기록 백업’에서 JSON 파일을 보관하고, 이 사이트의 ‘백업 복원’으로 옮겨 주세요. 기존 HTML 버전의 백업도 복원할 수 있어요. 브라우저 데이터 삭제·비공개 모드·사이트 주소 변경으로 기록이 사라질 수 있으니 먼저 백업해 주세요.</p></section></div><div class="notice">한자·뜻·대표 음은 첨부하신 「한자6급_학생용_30회_학습지.docx」 기준이에요. 예를 들어 車는 ‘수레 거’, 女는 ‘여자 녀’로 읽어요. 이번 퀴즈에서는 학습지의 대표 뜻과 음을 기준으로 확인해요.</div>`; }
+function modalHead(title,subtitle) { return `<div class="modal-header"><div><h2 class="modal-title" id="modal-title" tabindex="-1">${title}</h2><p class="modal-subtitle">${subtitle}</p></div><button class="icon-button" data-action="close-modal" aria-label="학습 창 닫기">${icon('close',18)}</button></div>`; }
+function showModal(html) {
+  const modal=$('#learning-modal'), active=document.activeElement;
+  const action=modal.contains(active)?active.dataset.action:null;
+  const index=action?[...modal.querySelectorAll('[data-action]')].filter(x=>x.dataset.action===action).indexOf(active):-1;
+  $('#modal-content').innerHTML=html;
+  if(!modal.open) modal.showModal();
+  const replacement=action?[...modal.querySelectorAll('[data-action]')].filter(x=>x.dataset.action===action)[index]:null;
+  (replacement&&!replacement.disabled?replacement:$('#modal-title')).focus({preventScroll:true});
+  modal.scrollTop=0;
+}
+function closeModal() { $('#learning-modal').close(); session=null; render(); $('#main').focus({preventScroll:true}); }
+function study(group,ids=null) {
+  const items = ids ? DATA.filter(x=>ids.includes(x.id)) : groupItems(group);
+  if(!items.length) return toast('복습할 한자가 없어요.');
+  if(!ids) {state.lastGroup=Number(group); save();}
+  session={type:'study',group:Number(group)||1,all:items,items:[...items],index:0,flipped:false,lesson:0,review:!!ids};
+  renderStudy();
+}
+function renderStudy() {
+  const s=session,item=s.items[s.index],known=state.known.includes(item.id),count=s.items.filter(x=>state.known.includes(x.id)).length;
+  showModal(modalHead(s.review?'다시 읽는 한자':`${s.group}묶음 · ${groupRange(s.group)} 읽기 연습`,s.review?`선택한 한자 ${s.all.length}자 · 뜻과 음을 소리 내어 읽어 봐요.`:'한자를 보고 뜻과 음을 먼저 소리 내어 읽어 봐요.')+`<div class="modal-body">${!s.review?`<div class="segmented" role="group" aria-label="학습 회차 선택"><button class="segment ${s.lesson===0?'active':''}" data-action="study-lesson" data-lesson="0">전체 30자</button>${[s.group*3-2,s.group*3-1,s.group*3].map(lesson=>`<button class="segment ${s.lesson===lesson?'active':''}" data-action="study-lesson" data-lesson="${lesson}">${lesson}회 · 10자</button>`).join('')}</div>`:''}<p class="reading-instruction">${s.flipped?'답을 확인했나요? 다시 한 번 소리 내어 읽어 봐요.':'① 뜻과 음을 소리 내어 읽기 → ② 답 확인하기'}</p><div class="flash-meta"><span>${item.lesson}회 학습지 · ${item.group}번째 묶음</span><span>${known?'✓ 읽을 수 있는 한자':'먼저 읽어 봐요'}</span></div><button class="flashcard" data-action="flip" aria-label="${item.hanja} 카드 ${s.flipped?'뜻과 음 숨기기':'뜻과 음 확인'}" aria-pressed="${s.flipped}"><span class="flash-hanja">${item.hanja}</span>${s.flipped?`<span class="flash-answer">${esc(item.meaning)} ${esc(item.sound)}</span><span class="flash-hint">뜻과 음을 확인하고 다시 읽어 보세요</span>`:'<span class="flash-hint">뜻과 음을 소리 내어 읽어 보세요</span>'}</button><div class="reading-reveal"><button class="${s.flipped?'secondary':'primary'}" data-action="reveal-reading" aria-pressed="${s.flipped}">${s.flipped?'다시 가리고 읽기':'뜻·음 확인'} ${icon(s.flipped?'rotate':'check',16)}</button></div><div class="flash-controls"><button class="secondary" data-action="study-prev" ${s.index===0?'disabled':''}>← 이전</button><span class="card-counter">${s.index+1} / ${s.items.length}</span><button class="secondary" data-action="study-next" ${s.index===s.items.length-1?'disabled':''}>다음 →</button></div><div class="button-row study-actions"><button class="secondary" data-action="toggle-known" aria-pressed="${known}">${icon('check',16)} ${known?'읽을 수 있어요 · 표시 취소':'읽을 수 있어요'}</button><button class="text-link" data-action="shuffle-study">${icon('rotate',13)} 순서 섞기</button><button class="text-link" data-action="study-to-quiz">읽기 퀴즈로 확인 →</button></div><div class="study-progress"><div class="progress-track"><i style="width:${count/s.items.length*100}%"></i></div><span>${count} / ${s.items.length}자 읽기</span></div><p class="keyboard-hint"><kbd>←</kbd><kbd>→</kbd> 카드 이동 &nbsp; <kbd>Space</kbd> 뜻·음 확인 &nbsp; <kbd>Esc</kbd> 닫기</p></div>`);
+}
+function setupQuiz(group) { session={type:'setup',group:Number(group),mode:'reading',count:30}; renderSetup(); }
+function renderSetup() {
+  const s=session;
+  showModal(modalHead(`${s.group}묶음 · ${groupRange(s.group)} 읽기 퀴즈`,'한자를 보고 뜻과 음을 읽은 뒤, 알맞은 보기를 골라요.')+`<div class="modal-body"><div class="quiz-setup"><div class="reading-example"><span class="hanja">家</span><span aria-hidden="true">→</span><strong>집 가</strong></div><p>한자를 보고 뜻과 음을 먼저 소리 내어 읽어 보세요.<br>‘읽었어요 · 보기 열기’를 누른 뒤, 알맞은 뜻과 음을 골라요.<br>시간 제한 없이 천천히 생각해도 괜찮아요.</p><p class="form-label">몇 문제 읽어 볼까요?</p><div class="choice-row" role="group" aria-label="문제 수">${[[10,'가볍게 10문제','한 묶음에서 무작위 10자'],[30,'차근차근 30문제','한 묶음의 30자 모두']].map(([count,label,sub])=>`<button class="choice-button ${s.count===count?'selected':''}" aria-pressed="${s.count===count}" data-action="quiz-count" data-count="${count}">${label}<small>${sub}</small></button>`).join('')}</div><button class="primary" data-action="start-quiz">읽기 퀴즈 시작 ${icon('arrow',17)}</button><p class="keyboard-hint">선택한 ${s.count}문제를 모두 풀면 결과가 기록돼요.</p></div></div>`);
+}
+function startQuiz(group,mode='reading',count=30,ids=null) {
+  // Every new quiz in this edition practices reading, including restored/retry paths.
+  mode='reading';
+  const items=ids?DATA.filter(x=>ids.includes(x.id)):groupItems(group);
+  if(!items.length) return toast('복습할 오답이 없어요.');
+  session={type:'quiz',group:Number(group)||1,mode,review:!!ids,questions:E.buildQuiz(items,{mode,count},DATA),index:0,answers:[],selected:null,optionsVisible:false};
+  if(!ids) {state.lastGroup=Number(group);save();}
+  renderQuestion();
+}
+function renderQuestion() {
+  const s=session,q=s.questions[s.index],answered=s.selected!==null,good=answered&&s.selected===q.answer,score=s.answers.filter(x=>x.correct).length;
+  const options=s.optionsVisible?`<div class="quiz-options">${q.options.map((option,i)=>`<button class="option ${answered&&option===q.answer?'correct':''} ${answered&&option===s.selected&&!good?'incorrect':''}" data-action="answer" data-index="${i}" ${answered?'disabled':''}><span class="option-number">${answered&&option===q.answer?'✓':answered&&option===s.selected?'×':i+1}</span><span class="quiz-reading-option">${esc(option)}</span>${answered&&option===q.answer?'<span class="sr-only">정답</span>':''}${answered&&option===s.selected&&!good?'<span class="sr-only">선택한 오답</span>':''}</button>`).join('')}</div>`:`<div class="reading-gate"><button class="primary" data-action="reveal-options">읽었어요 · 보기 열기 ${icon('arrow',17)}</button><p>스스로 읽어 본 뒤 눌러 주세요.</p></div>`;
+  showModal(modalHead(s.review?'오답 읽기 퀴즈':`${s.group}묶음 · ${groupRange(s.group)} 읽기 퀴즈`,modeLabel(s.mode))+`<div class="modal-body"><div class="quiz-top"><span>${s.index+1} / ${s.questions.length} 문제</span><span class="quiz-score">${score}개 정답</span></div><div class="progress-track" role="progressbar" aria-label="푼 문제" aria-valuenow="${s.answers.length}" aria-valuemin="0" aria-valuemax="${s.questions.length}"><i style="width:${s.answers.length/s.questions.length*100}%"></i></div><div class="quiz-card" tabindex="-1"><p>${s.optionsVisible?'읽은 뜻과 음에 맞는 보기를 골라요.':'뜻과 음을 먼저 소리 내어 읽어 보세요.'}</p><div class="question-hanja">${esc(q.prompt)}</div></div>${options}${answered?`<div class="feedback ${good?'success':'error'}" role="status"><strong>${good?'맞았어요! 잘 기억했네요.':'괜찮아요. 한 번 더 기억해요.'}</strong><p><span class="hanja">${q.item.hanja}</span> = ${esc(q.item.meaning)} ${esc(q.item.sound)}${!good?' · 오답 노트에 담았어요.':''}</p><button class="primary" data-action="quiz-next">${s.index===s.questions.length-1?'결과 보기':'다음 문제'} ${icon('arrow',15)}</button></div>`:s.optionsVisible?'<p class="keyboard-hint">보기를 누르거나 <kbd>1</kbd>–<kbd>4</kbd> 키로 답을 고르세요.</p>':''}</div>`);
+  if(answered) $('[data-action="quiz-next"]').focus({preventScroll:true});
+  else if(s.optionsVisible) $('.quiz-options .option').focus({preventScroll:true});
+  else $('.quiz-card').focus({preventScroll:true});
+}
+function answer(index) {
+  const s=session;if(!s||s.type!=='quiz'||!s.optionsVisible||s.selected!==null) return;
+  const q=s.questions[s.index],selected=q.options[Number(index)]; if(selected===undefined) return;
+  s.selected=selected; const correct=selected===q.answer;
+  s.answers.push({item:q.item,selected,correct});E.recordAnswer(state,q.item.id,correct);save();renderQuestion();
+}
+function finishQuiz() {
+  const s=session;if(s.type!=='quiz')return;
+  s.type='result';s.score=s.answers.filter(x=>x.correct).length;s.mistakes=s.answers.filter(x=>!x.correct).map(x=>x.item);
+  E.recordResult(state,{group:s.group,score:s.score,total:s.questions.length,mode:s.mode,review:s.review});save();
+  showModal(modalHead('오늘도 한 걸음 완료!',s.review?'오답 읽기 퀴즈':`${s.group}묶음 · ${groupRange(s.group)}`)+`<div class="modal-body"><div class="result-screen" tabindex="-1"><div class="result-emblem">${icon(s.score===s.questions.length?'star':'leaf',38)}</div><h2>${s.score===s.questions.length?'모두 맞혔어요!':s.score/s.questions.length>=.7?'차근차근 잘하고 있어요!':'또 만나면 더 잘할 수 있어요!'}</h2><p>${s.mistakes.length?'틀린 한자를 한 번 더 보면 기억이 단단해져요.':'정말 잘했어요. 배운 한자를 오래 기억해 봐요.'}</p><div class="result-score">${s.score}<small> / ${s.questions.length}</small></div><div class="result-summary"><span>정답률 <strong>${Math.round(s.score/s.questions.length*100)}%</strong></span><span>다시 볼 한자 <strong>${s.mistakes.length}자</strong></span></div><div class="button-row">${s.mistakes.length?'<button class="primary" data-action="retry-mistakes">틀린 한자 다시 풀기</button>':s.group<10&&!s.review?`<button class="primary" data-action="study" data-group="${s.group+1}">다음 묶음 익히기</button>`:''}<button class="secondary" data-action="result-home">공부방으로</button></div>${s.mistakes.length?`<div class="result-list"><h3>다시 기억해 볼까요?</h3>${s.mistakes.map(x=>`<div class="result-row"><span class="hanja">${x.hanja}</span><strong>${esc(x.meaning)} ${esc(x.sound)}</strong><span>${x.lesson}회</span></div>`).join('')}</div>`:''}<p class="keyboard-hint">${storageAvailable?'결과를 이 브라우저에 저장했어요.':'자동 저장이 제한되어 있어요. 창을 닫기 전에 기록을 백업해 주세요.'}</p></div></div>`);
+}
+function exportBackup() {
+  const content=JSON.stringify({app:'hanja-hangeoreum',version:1,exportedAt:new Date().toISOString(),state},null,2);
+  const blob=new Blob([content],{type:'application/json;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+  const day=new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Seoul'}).format(new Date());
+  a.href=url;a.download=`한자한걸음_학습기록_${day}.json`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);toast('학습 기록 백업 파일을 내려받았어요.');
+}
+async function importBackup(file) {
+  if(!file)return;
+  try {
+    if(file.size>2*1024*1024) throw Error('백업 파일이 너무 커요.');
+    const raw=JSON.parse(await file.text());
+    if(raw.app!=='hanja-hangeoreum'||raw.version!==1||!raw.state||!Array.isArray(raw.state.known)||!Array.isArray(raw.state.wrong)||!Array.isArray(raw.state.results)) throw Error('한자 한 걸음에서 만든 백업 파일을 선택해 주세요.');
+    const restored=E.sanitizeState(raw.state,DATA);
+    if(!window.confirm(`백업 기록(읽을 수 있는 한자 ${restored.known.length}자, 퀴즈 ${restored.results.length}회)으로 현재 기록을 바꿀까요? 현재 기록이 필요하면 취소하고 먼저 백업해 주세요.`)) return;
+    state=restored;save();render();toast('백업 기록을 복원했어요.');
+  }catch(error){toast(error instanceof SyntaxError?'파일을 읽지 못했어요. 올바른 JSON 백업을 선택해 주세요.':error.message);}
+  finally {$('#backup-input').value='';}
+}
+document.addEventListener('click',event=>{
+  const b=event.target.closest('[data-action]');if(!b||b.disabled)return;
+  const action=b.dataset.action;
+  switch(action) {
+    case 'nav': navigate(b.dataset.page);break;
+    case 'scroll-groups': $('#groups').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});break;
+    case 'study': study(Number(b.dataset.group));break;
+    case 'character': {const item=DATA.find(x=>x.id===Number(b.dataset.id));study(item.group,[item.id]);break;}
+    case 'study-review': study(state.lastGroup,[...state.wrong]);break;
+    case 'close-modal': closeModal();break;
+    case 'result-home': closeModal();navigate('home');break;
+    case 'flip':
+    case 'reveal-reading':session.flipped=!session.flipped;renderStudy();break;
+    case 'study-prev':if(session.index>0){session.index--;session.flipped=false;renderStudy();}break;
+    case 'study-next':if(session.index<session.items.length-1){session.index++;session.flipped=false;renderStudy();}break;
+    case 'study-lesson':session.lesson=Number(b.dataset.lesson);session.items=session.all.filter(x=>!session.lesson||x.lesson===session.lesson);session.index=0;session.flipped=false;renderStudy();break;
+    case 'shuffle-study':session.items=E.shuffle(session.items);session.index=0;session.flipped=false;renderStudy();toast('카드 순서를 섞었어요.');break;
+    case 'toggle-known':{const id=session.items[session.index].id;if(state.known.includes(id))state.known=state.known.filter(x=>x!==id);else E.recordAnswer(state,id,true);save();renderStudy();break;}
+    case 'study-to-quiz':if(session.review)startQuiz(session.group,'reading',Math.min(30,session.items.length),session.items.map(x=>x.id));else setupQuiz(session.group);break;
+    case 'quiz-setup':setupQuiz(Number(b.dataset.group));break;
+    case 'quiz-count':session.count=Number(b.dataset.count);renderSetup();break;
+    case 'start-quiz':startQuiz(session.group,session.mode,session.count);break;
+    case 'review-quiz':startQuiz(state.lastGroup,'reading',30,[...state.wrong]);break;
+    case 'reveal-options':if(session?.type==='quiz'&&session.selected===null){session.optionsVisible=true;renderQuestion();}break;
+    case 'answer':answer(b.dataset.index);break;
+    case 'quiz-next':if(session.selected===null)return;if(session.index===session.questions.length-1)finishQuiz();else{session.index++;session.selected=null;session.optionsVisible=false;renderQuestion();}break;
+    case 'retry-mistakes':startQuiz(session.group,session.mode,30,session.mistakes.map(x=>x.id));break;
+    case 'dictionary-filter':dictionaryFilter=b.dataset.filter;render();break;
+    case 'export':exportBackup();break;
+    case 'import':$('#backup-input').click();break;
+    case 'reset':if(window.confirm('이 브라우저의 읽기 표시·오답·퀴즈 기록을 모두 지울까요? 지운 기록은 백업 파일이 있어야 복원할 수 있어요.')){state=E.initialState();save();render();toast('학습 기록을 초기화했어요.');}break;
+  }
+});
+document.addEventListener('input',event=>{if(event.target.id==='hanja-search'){searchTerm=event.target.value;$('#dictionary-results').innerHTML=dictionaryResults();}});
+document.addEventListener('change',event=>{if(event.target.id==='group-filter'){groupFilter=event.target.value;$('#dictionary-results').innerHTML=dictionaryResults();}if(event.target.id==='backup-input')importBackup(event.target.files[0]);});
+$('#learning-modal').addEventListener('cancel',event=>{event.preventDefault();closeModal();});
+$('#learning-modal').addEventListener('click',event=>{if(event.target===$('#learning-modal')){const r=event.target.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)closeModal();}});
+document.addEventListener('keydown',event=>{
+  if(!session||event.ctrlKey||event.metaKey||event.altKey||/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName))return;
+  if(session.type==='study'){
+    if(event.key==='ArrowLeft'&&session.index>0){event.preventDefault();session.index--;session.flipped=false;renderStudy();}
+    if(event.key==='ArrowRight'&&session.index<session.items.length-1){event.preventDefault();session.index++;session.flipped=false;renderStudy();}
+    if(event.code==='Space'&&!['BUTTON','A'].includes(document.activeElement.tagName)){event.preventDefault();session.flipped=!session.flipped;renderStudy();}
+  }
+  if(session.type==='quiz'&&/^[1-4]$/.test(event.key)){event.preventDefault();answer(Number(event.key)-1);}
+  if(session.type==='quiz'&&event.key==='Enter'&&session.selected!==null&&!['BUTTON','A'].includes(document.activeElement.tagName)){event.preventDefault();$('[data-action="quiz-next"]').click();}
+});
+render();
+</script>
+</body>
+</html>
